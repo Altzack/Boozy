@@ -1,0 +1,45 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "react/jsx-filename-extension": ["off", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/prop-types": ["off"],
+    "react/jsx-wrap-multilines": ["off"],
+    "react/jsx-curly-newline": ["off"],
+    "no-plusplus": ["off"],
+    "no-use-before-define": ["off"],
+    "no-param-reassign": ["off"],
+    "import/prefer-default-export": ["off"],
+    "import/extensions": ["off"],
+    "no-unused-vars": [
+      "warn",
+      { "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
+    "arrow-parens": ["off"],
+    "quotes": ["error", "single"],
+    "prettier/prettier": ["error"],
+    "no-restricted-syntax": ["off"]
+  }
+}
