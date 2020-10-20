@@ -16,7 +16,7 @@ export default function DrinkItem(props) {
           className="DrinkItem_Delete"
           onClick={() => props.onClickDelete(props.id)}
         >
-          Delete
+          deletus
         </button>
       </div>
     </li>
