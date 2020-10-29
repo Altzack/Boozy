@@ -128,7 +128,7 @@ class App extends Component {
                     render={(props) => <AddDrink {...props} />}
                   />
                   <Route
-                    path="/EditDrink"
+                    path="/EditDrink/:drinkId"
                     render={(props) => <EditDrink {...props} />}
                   />
                   <Route>

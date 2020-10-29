@@ -48,6 +48,21 @@ const Button = styled.button`
 export default class DrinkInfoPage extends React.Component {
   static contextType = AppContext;
 
+  copyToClipboard = () => {
+    const drinkId = Number(this.props.match.params.drinkId);
+    console.log(drinkId);
+    let copyText = `https://boozy.vercel.app/drinks/${drinkId}`;
+
+    navigator.clipboard.writeText(copyText).then(
+      function () {
+        console.log('Async: Copying to clipboard was successful!');
+      },
+      function (err) {
+        console.error('Async: Could not copy text: ', err);
+      }
+    );
+  };
+
   handleClickDelete = (e) => {
     e.preventDefault();
     const drinkId = Number(this.props.match.params.drinkId);
@@ -95,9 +110,9 @@ export default class DrinkInfoPage extends React.Component {
         <br />
         <div>
           <Button onClick={this.handleClickDelete}>Delete</Button>
-          <Button>Share</Button>
+          <Button onClick={this.copyToClipboard}>Share</Button>
           <Button>
-            <Link style={{ color: '#000' }} to={`/EditDrink`}>
+            <Link style={{ color: '#000' }} to={`/EditDrink/${drinkId}`}>
               Edit
             </Link>
           </Button>

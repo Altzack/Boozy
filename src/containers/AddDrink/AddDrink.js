@@ -180,6 +180,7 @@ export default class AddDrink extends Component {
           </div>
           <div className="field">
             <textarea
+              style={{ width: 200 }}
               id="instructions"
               placeholder="instructions..."
               name="instructions-section"

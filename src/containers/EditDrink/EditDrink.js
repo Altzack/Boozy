@@ -54,7 +54,52 @@ const SubTitle = styled.h2`
 `;
 
 export default class EditDrink extends Component {
+  static contextType = AppContext;
+
+  handleSubmit = (e) => {
+    const drinkId = Number(this.props.match.params.drinkId);
+    e.preventDefault();
+    const getDrink = {
+      title: e.target['title-section'].value,
+      alcohol: e.target['alcohol-section'].value,
+      liqueurs: e.target['liqueur-section'].value,
+      juices: e.target['juices-section'].value,
+      other: e.target['other-section'].value,
+      instructions: e.target['instructions-section'].value,
+      mixers: e.target['mixers-section'].value,
+      modified: new Date(),
+    };
+
+    fetch(`${config.API_ENDPOINT}/drinks/${drinkId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(getDrink),
+      headers: {
+        'content-type': 'application/json',
+      },
+    })
+      .then((drinkRes) => {
+        if (!drinkRes.ok) return drinkRes.json().then((e) => Promise.reject(e));
+        return drinkRes.json();
+      })
+      .then((drink) => {
+        this.props.history.push(`/drinks/${drinkId}`);
+        console.log('drink edited');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   render() {
+    const drinkId = Number(this.props.match.params.drinkId);
+    console.log(this.context.drinks);
+    console.log(drinkId);
+    const drinkInfo =
+      this.context.drinks.length > 1
+        ? this.context.drinks.find((d) => {
+            return d.id === drinkId;
+          })
+        : '';
     return (
       <BoozyError>
         <Title>Edit Drink</Title>
@@ -68,7 +113,7 @@ export default class EditDrink extends Component {
               type="text"
               id="title"
               name="title-section"
-              placeholder="Piña colada..."
+              defaultValue={drinkInfo.title}
               aria-required="true"
               aria-label="Title"
               required
@@ -79,7 +124,7 @@ export default class EditDrink extends Component {
             <input
               type="text"
               id="alcohol"
-              placeholder="Rum..."
+              defaultValue={drinkInfo.alcohol}
               name="alcohol-section"
               aria-required="true"
               aria-label="alcohol"
@@ -91,7 +136,7 @@ export default class EditDrink extends Component {
             <input
               type="text"
               id="mixers"
-              placeholder="None..."
+              defaultValue={drinkInfo.mixers}
               name="mixers-section"
               aria-required="true"
               aria-label="mixers"
@@ -103,7 +148,7 @@ export default class EditDrink extends Component {
             <input
               type="text"
               id="liqueurs"
-              placeholder="None..."
+              defaultValue={drinkInfo.liqueurs}
               name="liqueur-section"
               aria-required="true"
               aria-label="liqueur"
@@ -114,7 +159,7 @@ export default class EditDrink extends Component {
             <StyledLabel htmlFor="juices">Juices: </StyledLabel>
             <input
               type="text"
-              placeholder="Pineapple juice..."
+              defaultValue={drinkInfo.juices}
               id="juices"
               name="juices-section"
               aria-required="true"
@@ -127,7 +172,7 @@ export default class EditDrink extends Component {
             <input
               type="text"
               id="other"
-              placeholder="Coconut cream..."
+              defaultValue={drinkInfo.other}
               name="other-section"
               aria-required="true"
               aria-label="other"
@@ -136,16 +181,15 @@ export default class EditDrink extends Component {
           </div>
           <div className="field">
             <textarea
+              style={{ width: 200 }}
               id="instructions"
-              placeholder="instructions..."
+              defaultValue={drinkInfo.instructions}
               name="instructions-section"
               aria-label="instructions"
             />
           </div>
           <div className="buttons">
-            <Button type="submit" to="/">
-              Edit Drink
-            </Button>
+            <Button type="submit">Edit Drink</Button>
           </div>
         </BoozyForm>
       </BoozyError>
