@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import AppContext from '../../AppContext';
 import BoozyError from '../../BoozyError';
-import ValidationError from '../../ValidationError';
 import config from '../../config';
 import styled from 'styled-components/macro';
 import '../../App.css';

@@ -13,20 +13,6 @@ const DrinkContainer = styled.div`
   margin-top: 30px;
 `;
 
-const PageContainer = styled.div`
-  display: flex;
-  padding-top: 42px;
-  padding: 24px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  flex-direction: row;
-  @media (max-width: 480px) {
-    width: 90%;
-  }
-`;
-
 const Title = styled.h1`
   font-size: 30px;
   letter-spacing: 3px;
