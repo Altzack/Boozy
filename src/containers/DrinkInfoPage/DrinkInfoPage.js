@@ -36,6 +36,7 @@ const Instructions = styled.span`
 `;
 
 const Button = styled.button`
+  background-color: #fff;
   color: #000;
   margin-right: 10px;
   font-weight: 600;

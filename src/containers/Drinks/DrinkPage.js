@@ -33,6 +33,7 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
+  background-color: #fff;
   color: #000;
   margin-right: 10px;
   font-weight: 600;
