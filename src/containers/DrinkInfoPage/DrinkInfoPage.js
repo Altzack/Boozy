@@ -55,10 +55,12 @@ export default class DrinkInfoPage extends React.Component {
 
     navigator.clipboard.writeText(copyText).then(
       function () {
-        console.log('Async: Copying to clipboard was successful!');
+        console.log('Copying link to clipboard was successful!');
+        alert('Copying link to clipboard was successful!');
       },
       function (err) {
-        console.error('Async: Could not copy text: ', err);
+        console.error('Could not copy text: ', err);
+        alert('Could not copy');
       }
     );
   };
