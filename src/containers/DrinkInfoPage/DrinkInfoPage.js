@@ -94,7 +94,7 @@ export default class DrinkInfoPage extends React.Component {
     console.log(this.context.drinks);
     console.log(drinkId);
     const drinkInfo =
-      this.context.drinks.length > 1
+      this.context.drinks.length > 0
         ? this.context.drinks.find((d) => {
             return d.id === drinkId;
           })
