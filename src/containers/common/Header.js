@@ -16,7 +16,7 @@ const AppHeaderContainer = styled.div`
   width: 100vw;
   z-index: 99;
   color: rgba(232, 230, 227, 0.85);
-  background-color: rgb(24, 26, 27);
+  background-color: rgb(34, 36, 38);
 `;
 
 const FooterSeparator = styled.span`
@@ -76,9 +76,9 @@ export default function Header() {
             <FooterSeparator>|</FooterSeparator>
             <Link
               style={{ textDecoration: 'none', color: '#000' }}
-              to="/getstarted"
+              to="/drinks"
             >
-              <StyledHeader>Get Started</StyledHeader>
+              <StyledHeader>Drinks</StyledHeader>
             </Link>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'center' }}>
@@ -125,11 +125,8 @@ export default function Header() {
           <Link style={{ textDecoration: 'none', color: '#000' }} to="/about">
             <h3>About</h3>
           </Link>
-          <Link
-            style={{ textDecoration: 'none', color: '#000' }}
-            to="/getstarted"
-          >
-            <h3>Get Started</h3>
+          <Link style={{ textDecoration: 'none', color: '#000' }} to="/drinks">
+            <h3>Drinks</h3>
           </Link>
         </Drawer>
       </MobileOnly>

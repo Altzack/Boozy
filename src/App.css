@@ -8,6 +8,12 @@ body {
 html {
   background-color: rgb(24, 26, 27);
 }
+input {
+  color: #000;
+}
+.field {
+  margin: 12px 0;
+}
 .services {
   padding: 5rem 0;
 }

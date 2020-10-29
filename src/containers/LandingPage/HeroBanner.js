@@ -143,9 +143,14 @@ const HeroBanner = () => {
         </StyledParagraph>
         <br />
         <Row>
-          <Link to="/getstarted">
-            <CTAButton type="primary" shape="round" size="large">
-              Get Started
+          <Link to="/drinks">
+            <CTAButton
+              style={{ width: 124 }}
+              type="primary"
+              shape="round"
+              size="large"
+            >
+              Drinks
             </CTAButton>
           </Link>
           <Link to="/about">
