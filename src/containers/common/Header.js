@@ -5,7 +5,7 @@ import { DesktopOnly, MobileOnly } from './responsiveComponents';
 import { Drawer, Button } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import 'antd/dist/antd.css';
-import { FaHome } from 'react-icons/fa';
+import '../../App.css';
 
 const AppHeaderContainer = styled.div`
   padding: 8px 12px;
@@ -47,12 +47,16 @@ const StyledTitle = styled.h1`
   color: rgba(232, 230, 227, 0.85);
   margin-bottom: 0;
   letter-spacing: 3px;
+  font-family: Permanent Marker;
+  :hover {
+    color: #1890ff;
+  }
 `;
 const LogoLink = styled(Link)`
   justify-self: center;
   align-self: center;
   color: rgba(232, 230, 227, 0.85);
-  font-size: 2rem;
+  font-size: 15px;
 `;
 
 export default function Header() {
@@ -83,11 +87,11 @@ export default function Header() {
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'center' }}>
             <LogoLink to="/">
-              <FaHome />
+              <StyledTitle>Boozy</StyledTitle>
             </LogoLink>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'flex-end' }}>
-            <StyledTitle>Boozy</StyledTitle>
+            <img alt="logo" src="favicon-32x32.png"></img>
           </HeaderSection>
         </HeaderContentContainer>
       </DesktopOnly>
@@ -108,11 +112,11 @@ export default function Header() {
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'center' }}>
             <LogoLink to="/">
-              <FaHome />
+              <StyledTitle>Boozy</StyledTitle>
             </LogoLink>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'flex-end' }}>
-            <StyledTitle>Boozy</StyledTitle>
+            <img alt="logo" src="favicon-32x32.png"></img>
           </HeaderSection>
         </HeaderContentContainer>
         <Drawer

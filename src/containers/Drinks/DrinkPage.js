@@ -5,20 +5,20 @@ import DrinkList from './DrinksList';
 import { Link } from 'react-router-dom';
 
 const ContentContainer = styled.div`
-  max-width: 1000px;
   flex-direction: column;
   display: flex;
   align-items: center;
-  margin: auto;
 `;
 
 const PageContainer = styled.div`
-  padding-top: 42px;
-  padding: 24px;
+  margin-top: 42px;
   display: flex;
-  align-items: center;
   width: 100%;
   flex-direction: column;
+  padding: 50px;
+  @media (max-width: 480px) {
+    margin-top: 10px;
+  }
 `;
 
 const Title = styled.h1`

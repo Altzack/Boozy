@@ -103,10 +103,22 @@ export default class DrinkInfoPage extends React.Component {
       <DrinkContainer className="drink">
         <Title>{drinkInfo.title}</Title>
         <SubTitle>Alcohol: {drinkInfo.alcohol}</SubTitle>
-        <SubTitle>Mixers: {drinkInfo.mixers}</SubTitle>
-        <SubTitle>Liqueur: {drinkInfo.liqueurs}</SubTitle>
-        <SubTitle>Juices: {drinkInfo.juices}</SubTitle>
-        <SubTitle>Other: {drinkInfo.other}</SubTitle>
+        {drinkInfo.mixers ? (
+          <SubTitle>Mixers: {drinkInfo.mixers}</SubTitle>
+        ) : (
+          ''
+        )}
+        {drinkInfo.liqueurs ? (
+          <SubTitle>Liqueur: {drinkInfo.liqueurs}</SubTitle>
+        ) : (
+          ''
+        )}
+        {drinkInfo.juices ? (
+          <SubTitle>Juices: {drinkInfo.juices}</SubTitle>
+        ) : (
+          ''
+        )}
+        {drinkInfo.other ? <SubTitle>Other: {drinkInfo.other}</SubTitle> : ''}
         <SubTitle>Modified: {drinkInfo.modified}</SubTitle>
         <Instructions>{drinkInfo.instructions}</Instructions>
         <br />

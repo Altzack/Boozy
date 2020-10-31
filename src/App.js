@@ -28,6 +28,7 @@ const AppContainer = styled.div`
   color: rgba(232, 230, 227, 0.85);
   background-color: rgb(24, 26, 27);
   ${({ isMobile }) => isMobile && 'overflow-x: hidden;'}
+  max-width: 100%;
 `;
 
 const ContentContainer = styled.div`

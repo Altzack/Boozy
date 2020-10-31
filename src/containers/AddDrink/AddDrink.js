@@ -104,9 +104,7 @@ export default class AddDrink extends Component {
     return (
       <BoozyError>
         <Title>Create A Drink</Title>
-        <SubTitle>
-          If you want to leave a field blank, please specify 'none'
-        </SubTitle>
+        <SubTitle>If none, leave the field blank</SubTitle>
         <BoozyForm onSubmit={this.handleSubmit}>
           <div className="field">
             <StyledLabel htmlFor="title">Title: </StyledLabel>
@@ -117,6 +115,7 @@ export default class AddDrink extends Component {
               placeholder="Piña colada..."
               aria-required="true"
               aria-label="Title"
+              maxLength="25"
               required
             />
           </div>
@@ -137,11 +136,10 @@ export default class AddDrink extends Component {
             <input
               type="text"
               id="mixers"
-              placeholder="None..."
+              placeholder="..."
               name="mixers-section"
               aria-required="true"
               aria-label="mixers"
-              required
             />
           </div>
           <div className="field">
@@ -149,11 +147,10 @@ export default class AddDrink extends Component {
             <input
               type="text"
               id="liqueurs"
-              placeholder="None..."
+              placeholder="..."
               name="liqueur-section"
               aria-required="true"
               aria-label="liqueur"
-              required
             />
           </div>
           <div className="field">
@@ -165,7 +162,6 @@ export default class AddDrink extends Component {
               name="juices-section"
               aria-required="true"
               aria-label="juice"
-              required
             />
           </div>
           <div className="field">
@@ -177,7 +173,6 @@ export default class AddDrink extends Component {
               name="other-section"
               aria-required="true"
               aria-label="other"
-              required
             />
           </div>
           <div className="field">
@@ -187,6 +182,7 @@ export default class AddDrink extends Component {
               placeholder="instructions..."
               name="instructions-section"
               aria-label="instructions"
+              required
             />
           </div>
           <div className="buttons">

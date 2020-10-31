@@ -6,16 +6,14 @@ import AppContext from '../../AppContext';
 const DrinkContainer = styled.div`
   max-width: 1000px;
   align-items: center;
-  margin: auto;
   padding: 50px;
 `;
 
 const PageContainer = styled.div`
   display: flex;
   padding-top: 42px;
-  display: flex;
-  align-items: center;
   text-align: center;
+  justify-content: space-evenly;
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
@@ -26,10 +24,11 @@ const PageContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   text-transform: capitalize;
   color: #fff;
   margin-bottom: 10px;
+  max-width: 320px;
 `;
 
 const Button = styled.button`

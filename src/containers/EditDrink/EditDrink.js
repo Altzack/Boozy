@@ -105,9 +105,7 @@ export default class EditDrink extends Component {
     return (
       <BoozyError>
         <Title>Edit Drink</Title>
-        <SubTitle>
-          If you want to leave a field blank, please specify 'none'
-        </SubTitle>
+        <SubTitle>If none, leave the field blank</SubTitle>
         <BoozyForm onSubmit={this.handleSubmit}>
           <div className="field">
             <StyledLabel htmlFor="title">Title: </StyledLabel>
@@ -118,6 +116,7 @@ export default class EditDrink extends Component {
               defaultValue={drinkInfo.title}
               aria-required="true"
               aria-label="Title"
+              maxLength="25"
               required
             />
           </div>
@@ -142,7 +141,6 @@ export default class EditDrink extends Component {
               name="mixers-section"
               aria-required="true"
               aria-label="mixers"
-              required
             />
           </div>
           <div className="field">
@@ -154,7 +152,6 @@ export default class EditDrink extends Component {
               name="liqueur-section"
               aria-required="true"
               aria-label="liqueur"
-              required
             />
           </div>
           <div className="field">
@@ -166,7 +163,6 @@ export default class EditDrink extends Component {
               name="juices-section"
               aria-required="true"
               aria-label="juice"
-              required
             />
           </div>
           <div className="field">
@@ -178,7 +174,6 @@ export default class EditDrink extends Component {
               name="other-section"
               aria-required="true"
               aria-label="other"
-              required
             />
           </div>
           <div className="field">
@@ -188,6 +183,7 @@ export default class EditDrink extends Component {
               defaultValue={drinkInfo.instructions}
               name="instructions-section"
               aria-label="instructions"
+              required
             />
           </div>
           <div className="buttons">
