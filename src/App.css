@@ -7,6 +7,8 @@ body {
 }
 html {
   background-color: rgb(24, 26, 27);
+  max-width: 100%;
+  overflow-x: hidden;
 }
 input {
   color: #000;
