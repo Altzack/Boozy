@@ -1,5 +1,5 @@
 {
-  "name": "fullstack-capstone-1",
+  "name": "boozy",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "express": "^4.17.1",
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
+    "moment": "^2.29.1",
     "query-string": "^6.13.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

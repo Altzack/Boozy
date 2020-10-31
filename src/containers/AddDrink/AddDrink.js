@@ -5,6 +5,7 @@ import ValidationError from '../../ValidationError';
 import config from '../../config';
 import styled from 'styled-components/macro';
 import '../../App.css';
+import moment from 'moment';
 
 const BoozyForm = styled.form`
   display: flex;
@@ -65,6 +66,7 @@ export default class AddDrink extends Component {
   static contextType = AppContext;
 
   handleSubmit = (e) => {
+    let dayString = moment().format('MM/DD/YYYY');
     e.preventDefault();
     const getDrink = {
       title: e.target['title-section'].value,
@@ -74,7 +76,7 @@ export default class AddDrink extends Component {
       other: e.target['other-section'].value,
       instructions: e.target['instructions-section'].value,
       mixers: e.target['mixers-section'].value,
-      modified: new Date(),
+      modified: dayString,
     };
 
     fetch(`${config.API_ENDPOINT}/drinks`, {
@@ -91,7 +93,7 @@ export default class AddDrink extends Component {
       .then((drink) => {
         this.context.addDrink(drink);
         this.props.history.push('/drinks');
-        console.log('drink created');
+        console.log(getDrink);
       })
       .catch((error) => {
         console.log(error);

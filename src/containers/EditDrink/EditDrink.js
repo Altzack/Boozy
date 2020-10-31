@@ -4,6 +4,7 @@ import BoozyError from '../../BoozyError';
 import config from '../../config';
 import styled from 'styled-components/macro';
 import '../../App.css';
+import moment from 'moment';
 
 const BoozyForm = styled.form`
   display: flex;
@@ -57,6 +58,7 @@ export default class EditDrink extends Component {
   static contextType = AppContext;
 
   handleSubmit = (e) => {
+    let dayString = moment().format('MM/DD/YYYY');
     const drinkId = Number(this.props.match.params.drinkId);
     e.preventDefault();
     const getDrink = {
@@ -67,7 +69,7 @@ export default class EditDrink extends Component {
       other: e.target['other-section'].value,
       instructions: e.target['instructions-section'].value,
       mixers: e.target['mixers-section'].value,
-      modified: new Date(),
+      modified: dayString,
     };
 
     fetch(`${config.API_ENDPOINT}/drinks/${drinkId}`, {
@@ -79,11 +81,11 @@ export default class EditDrink extends Component {
     })
       .then((drinkRes) => {
         if (!drinkRes.ok) return drinkRes.json().then((e) => Promise.reject(e));
-        return drinkRes.json();
       })
-      .then((drink) => {
-        this.props.history.push(`/drinks/${drinkId}`);
+      .then(() => {
+        this.props.history.push(`/drinks`);
         console.log('drink edited');
+        console.log(getDrink);
       })
       .catch((error) => {
         console.log(error);
