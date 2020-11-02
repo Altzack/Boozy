@@ -28,7 +28,16 @@ const Title = styled.h1`
   text-transform: capitalize;
   color: #fff;
   margin-bottom: 10px;
-  max-width: 320px;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (max-width: 480px) {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 `;
 
 const Button = styled.button`

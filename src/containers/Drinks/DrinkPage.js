@@ -15,7 +15,7 @@ const PageContainer = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 50px;
+  padding: 40px;
   @media (max-width: 480px) {
     margin-top: 10px;
   }
@@ -33,11 +33,21 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
-  background-color: #fff;
-  color: #000;
-  margin-right: 10px;
-  font-weight: 600;
-  border-radius: 5px;
+  color: #fff;
+  width: 200px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #1c89ff;
+  border: solid 1px transparent;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  :hover {
+    background-color: transparent;
+    border-color: #fff;
+    transition: all 0.1s ease-in-out;
+  }
 `;
 
 export default function DrinkPage() {
@@ -47,8 +57,8 @@ export default function DrinkPage() {
       <ContentContainer>
         <Title>Add or browse drinks</Title>
         <Button>
-          <Link style={{ color: '#000' }} to={`/AddDrink`}>
-            Add Drink
+          <Link style={{ color: '#fff' }} to={`/AddDrink`}>
+            Add drink
           </Link>
         </Button>
       </ContentContainer>
