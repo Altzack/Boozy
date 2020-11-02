@@ -1,4 +1,4 @@
-*A platform to connect through drink recipes*
+### A platform to connect through drink recipes
 
 
 
