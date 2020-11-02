@@ -56,11 +56,9 @@ export default function DrinkPage() {
     <PageContainer mobile={isTabletOrMobile}>
       <ContentContainer>
         <Title>Add or browse drinks</Title>
-        <Button>
-          <Link style={{ color: '#fff' }} to={`/AddDrink`}>
-            Add drink
-          </Link>
-        </Button>
+        <Link style={{ color: '#fff' }} to={`/AddDrink`}>
+          <Button>Add drink</Button>
+        </Link>
       </ContentContainer>
       <br />
       <ContentContainer>
