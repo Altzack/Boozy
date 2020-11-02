@@ -30,6 +30,9 @@ const Title = styled.h1`
   @media (max-width: 480px) {
     font-size: 22px;
   }
+  @media (max-width: 350px) {
+    font-size: 17px;
+  }
 `;
 
 const Button = styled.button`

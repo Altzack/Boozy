@@ -20,6 +20,9 @@ const PageContainer = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
   }
+  @media (max-width: 350px) {
+    margin-right: 50px;
+  }
 `;
 
 const Title = styled.h1`
@@ -32,7 +35,7 @@ const Title = styled.h1`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  @media (max-width: 480px) {
+  @media (min-width: 300px) {
     max-width: 200px;
     white-space: nowrap;
     overflow: hidden;
@@ -41,12 +44,22 @@ const Title = styled.h1`
 `;
 
 const Button = styled.button`
-  color: #000;
-  margin-right: 10px;
-  font-weight: 600;
-  background-color: #fff;
-  border-radius: 5px;
-  margin-top: 10px;
+  color: #fff;
+  font-weight: 500;
+  height: 34px;
+  background-color: #2a9d8f;
+  margin-top: 12px;
+  width: 100px;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.21);
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  :hover {
+    transition: all 0.1s ease-in-out;
+    background-color: #61d5c7;
+    cursor: pointer;
+  }
 `;
 
 export default class DrinkList extends React.Component {
@@ -60,20 +73,21 @@ export default class DrinkList extends React.Component {
       return (
         <DrinkContainer className="drink" key={drink.id}>
           <Title>
-            <Link to={`/drinks/${drink.id}`}>{drink.title}</Link>{' '}
+            <Link style={{ color: '#fff' }} to={`/drinks/${drink.id}`}>
+              {drink.title}
+            </Link>
           </Title>
           <div>
             <img
               alt="drink"
-              style={{ width: 200 }}
+              style={{ width: 190 }}
               src="placeholderdrink-min.jpg"
             />
           </div>
-          <Button>
-            <Link style={{ color: '#000' }} to={`/drinks/${drink.id}`}>
-              View Drink
-            </Link>
-          </Button>
+
+          <Link to={`/drinks/${drink.id}`}>
+            <Button>View drink</Button>
+          </Link>
         </DrinkContainer>
       );
     });

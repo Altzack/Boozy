@@ -126,10 +126,18 @@ export default function Header() {
           visible={visible}
           key="AppHeader-left-drawer"
         >
-          <Link style={{ textDecoration: 'none', color: '#000' }} to="/about">
+          <Link
+            onClick={onClose}
+            style={{ textDecoration: 'none', color: '#000' }}
+            to="/about"
+          >
             <h3>About</h3>
           </Link>
-          <Link style={{ textDecoration: 'none', color: '#000' }} to="/drinks">
+          <Link
+            onClick={onClose}
+            style={{ textDecoration: 'none', color: '#000' }}
+            to="/drinks"
+          >
             <h3>Drinks</h3>
           </Link>
         </Drawer>
