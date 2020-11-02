@@ -115,7 +115,7 @@ export default class AddDrink extends Component {
               placeholder="Piña colada..."
               aria-required="true"
               aria-label="Title"
-              maxLength="25"
+              maxLength="20"
               required
             />
           </div>
@@ -128,6 +128,7 @@ export default class AddDrink extends Component {
               name="alcohol-section"
               aria-required="true"
               aria-label="alcohol"
+              maxLength="20"
               required
             />
           </div>
@@ -139,6 +140,7 @@ export default class AddDrink extends Component {
               placeholder="..."
               name="mixers-section"
               aria-required="true"
+              maxLength="20"
               aria-label="mixers"
             />
           </div>
@@ -149,6 +151,7 @@ export default class AddDrink extends Component {
               id="liqueurs"
               placeholder="..."
               name="liqueur-section"
+              maxLength="20"
               aria-required="true"
               aria-label="liqueur"
             />
@@ -159,6 +162,7 @@ export default class AddDrink extends Component {
               type="text"
               placeholder="Pineapple juice..."
               id="juices"
+              maxLength="20"
               name="juices-section"
               aria-required="true"
               aria-label="juice"
@@ -169,6 +173,7 @@ export default class AddDrink extends Component {
             <input
               type="text"
               id="other"
+              maxLength="20"
               placeholder="Coconut cream..."
               name="other-section"
               aria-required="true"
@@ -182,6 +187,7 @@ export default class AddDrink extends Component {
               placeholder="instructions..."
               name="instructions-section"
               aria-label="instructions"
+              maxLength="150"
               required
             />
           </div>

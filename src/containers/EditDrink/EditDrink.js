@@ -116,7 +116,7 @@ export default class EditDrink extends Component {
               defaultValue={drinkInfo.title}
               aria-required="true"
               aria-label="Title"
-              maxLength="25"
+              maxLength="20"
               required
             />
           </div>
@@ -129,6 +129,7 @@ export default class EditDrink extends Component {
               name="alcohol-section"
               aria-required="true"
               aria-label="alcohol"
+              maxLength="20"
               required
             />
           </div>
@@ -140,6 +141,7 @@ export default class EditDrink extends Component {
               defaultValue={drinkInfo.mixers}
               name="mixers-section"
               aria-required="true"
+              maxLength="20"
               aria-label="mixers"
             />
           </div>
@@ -150,6 +152,7 @@ export default class EditDrink extends Component {
               id="liqueurs"
               defaultValue={drinkInfo.liqueurs}
               name="liqueur-section"
+              maxLength="20"
               aria-required="true"
               aria-label="liqueur"
             />
@@ -163,6 +166,7 @@ export default class EditDrink extends Component {
               name="juices-section"
               aria-required="true"
               aria-label="juice"
+              maxLength="20"
             />
           </div>
           <div className="field">
@@ -171,6 +175,7 @@ export default class EditDrink extends Component {
               type="text"
               id="other"
               defaultValue={drinkInfo.other}
+              maxLength="20"
               name="other-section"
               aria-required="true"
               aria-label="other"
@@ -182,6 +187,7 @@ export default class EditDrink extends Component {
               id="instructions"
               defaultValue={drinkInfo.instructions}
               name="instructions-section"
+              maxLength="150"
               aria-label="instructions"
               required
             />
