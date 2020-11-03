@@ -1,9 +1,12 @@
+## Boozy
+
 ### A platform to connect through drink recipes
 
+Browse, create and share custom mixed drink recipes
 
+- Live link: https://boozy.vercel.app/
 
-
-
+- Tech stack: (PERN) PostgreSQL, Express, React, Node
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
