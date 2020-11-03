@@ -23,6 +23,8 @@ const PageContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 2rem;
+  font-family: Rubik;
+  font-weight: 500;
   letter-spacing: 3px;
   text-transform: capitalize;
   color: #fff;

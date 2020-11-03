@@ -21,6 +21,7 @@ const AppHeaderContainer = styled.div`
 
 const FooterSeparator = styled.span`
   padding: 0 10px;
+  margin-top: 2px;
 `;
 
 const HeaderSection = styled.div`
@@ -30,6 +31,8 @@ const HeaderSection = styled.div`
 `;
 
 const HeaderContentContainer = styled.div`
+  font-family: Rubik;
+  font-weight: 500;
   max-width: 1200px;
   display: flex;
   margin: 0 auto;
@@ -41,6 +44,9 @@ const HeaderContentContainer = styled.div`
 const StyledHeader = styled.h3`
   color: rgba(232, 230, 227, 0.85);
   margin-bottom: 0;
+  :hover {
+    color: #1890ff;
+  }
 `;
 
 const StyledTitle = styled.h1`

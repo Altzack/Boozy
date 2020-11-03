@@ -27,11 +27,21 @@ const StyledLabel = styled.label`
   font-weight: 500;
 `;
 const Button = styled.button`
-  color: #000;
-  margin-right: 10px;
-  font-weight: 600;
-  background-color: #fff;
-  border-radius: 5px;
+  color: #fff;
+  width: 200px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #1c89ff;
+  border: solid 1px transparent;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+  :hover {
+    background-color: transparent;
+    border-color: #fff;
+    transition: all 0.1s ease-in-out;
+  }
 `;
 
 const Title = styled.h1`

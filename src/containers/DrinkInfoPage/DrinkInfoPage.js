@@ -4,10 +4,11 @@ import AppContext from '../../AppContext';
 import styled from 'styled-components/macro';
 import config from '../../config';
 import '../../App.css';
+import moment from 'moment';
 
 const DrinkContainer = styled.div`
+  justify-content: center;
   align-items: center;
-  margin: auto;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -16,11 +17,12 @@ const DrinkContainer = styled.div`
 
 const Title = styled.h1`
   font-size: 30px;
+  text-align: center;
   letter-spacing: 3px;
   text-transform: capitalize;
   color: #fff;
   margin-bottom: 10px;
-  @media (min-width: 800px) {
+  @media (min-width: 767px) {
     font-size: 50px;
   }
   @media (min-width: 1030px) {
@@ -30,11 +32,12 @@ const Title = styled.h1`
 
 const SubTitle = styled.h2`
   font-size: 20px;
+  text-align: center;
+  color: rgba(232, 230, 227, 0.85);
   letter-spacing: 1px;
   text-transform: capitalize;
-  color: #fff;
   margin-bottom: 10px;
-  @media (min-width: 800px) {
+  @media (min-width: 767px) {
     font-size: 35px;
   }
   @media (min-width: 1030px) {
@@ -42,12 +45,27 @@ const SubTitle = styled.h2`
   }
 `;
 
+const Modified = styled.h2`
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: #777;
+  margin-top: 10px;
+  @media (min-width: 200px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1030px) {
+    font-size: 22px;
+  }
+`;
+
 const Instructions = styled.div`
   max-width: 580px;
   white-space: wrap;
-
+  text-align: center;
   font-size: 20px;
-  @media (min-width: 800px) {
+  @media (min-width: 767px) {
     font-size: 30px;
   }
   @media (min-width: 1030px) {
@@ -93,8 +111,8 @@ const Button = styled.button`
   }
   @media (min-width: 1030px) {
     width: 110pxpx;
-    font-size: 20px;
-    height: 45px;
+    font-size: 19px;
+    height: 40px;
   }
 `;
 
@@ -171,7 +189,6 @@ export default class DrinkInfoPage extends React.Component {
           ''
         )}
         {drinkInfo.other ? <SubTitle>Other: {drinkInfo.other}</SubTitle> : ''}
-        <SubTitle>Modified: {drinkInfo.modified}</SubTitle>
         <Instructions>{drinkInfo.instructions}</Instructions>
         <br />
         <div>
@@ -183,6 +200,9 @@ export default class DrinkInfoPage extends React.Component {
             </Link>
           </Button>
         </div>
+        <Modified>
+          Modified: {moment(drinkInfo.modified).format('MM/DD/YY')}
+        </Modified>
       </DrinkContainer>
     );
   }
