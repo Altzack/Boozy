@@ -94,8 +94,6 @@ export default class EditDrink extends Component {
       })
       .then(() => {
         this.props.history.push(`/drinks`);
-        console.log('drink edited');
-        console.log(getDrink);
       })
       .catch((error) => {
         console.log(error);
@@ -104,8 +102,6 @@ export default class EditDrink extends Component {
 
   render() {
     const drinkId = Number(this.props.match.params.drinkId);
-    console.log(this.context.drinks);
-    console.log(drinkId);
     const drinkInfo =
       this.context.drinks.length > 0
         ? this.context.drinks.find((d) => {
@@ -126,7 +122,7 @@ export default class EditDrink extends Component {
               defaultValue={drinkInfo.title}
               aria-required="true"
               aria-label="Title"
-              maxLength="20"
+              maxLength="25"
               required
             />
           </div>

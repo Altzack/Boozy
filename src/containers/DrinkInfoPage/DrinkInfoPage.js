@@ -18,6 +18,8 @@ const DrinkContainer = styled.div`
 const Title = styled.h1`
   font-size: 30px;
   text-align: center;
+  font-family: Rubik;
+  font-weight: 400;
   letter-spacing: 3px;
   text-transform: capitalize;
   color: #fff;
@@ -32,6 +34,8 @@ const Title = styled.h1`
 
 const SubTitle = styled.h2`
   font-size: 20px;
+  font-family: Rubik;
+  font-weight: 200;
   text-align: center;
   color: rgba(232, 230, 227, 0.85);
   letter-spacing: 1px;
@@ -121,16 +125,13 @@ export default class DrinkInfoPage extends React.Component {
 
   copyToClipboard = () => {
     const drinkId = Number(this.props.match.params.drinkId);
-    console.log(drinkId);
     let copyText = `https://boozy.vercel.app/drinks/${drinkId}`;
 
     navigator.clipboard.writeText(copyText).then(
       function () {
-        console.log('Copying link to clipboard was successful!');
         alert('Copying link to clipboard was successful!');
       },
       function (err) {
-        console.error('Could not copy text: ', err);
         alert('Could not copy');
       }
     );
@@ -160,8 +161,6 @@ export default class DrinkInfoPage extends React.Component {
 
   render() {
     const drinkId = Number(this.props.match.params.drinkId);
-    console.log(this.context.drinks);
-    console.log(drinkId);
     const drinkInfo =
       this.context.drinks.length > 0
         ? this.context.drinks.find((d) => {

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a LandingPage by default 1`] = `
+<LandingPage__PageContainer>
+  <HeroBanner />
+  <LandingPage__ContentContainer>
+    <br />
+    <Services />
+  </LandingPage__ContentContainer>
+</LandingPage__PageContainer>
+`;

@@ -103,7 +103,6 @@ export default class AddDrink extends Component {
       .then((drink) => {
         this.context.addDrink(drink);
         this.props.history.push('/drinks');
-        console.log(getDrink);
       })
       .catch((error) => {
         console.log(error);
@@ -125,7 +124,7 @@ export default class AddDrink extends Component {
               placeholder="Piña colada..."
               aria-required="true"
               aria-label="Title"
-              maxLength="20"
+              maxLength="28"
               required
             />
           </div>

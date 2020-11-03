@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a DrinkInfoPage by default 1`] = `
+<DrinkPage__PageContainer
+  mobile={false}
+>
+  <DrinkPage__ContentContainer>
+    <DrinkPage__Title>
+      Add or browse drinks
+    </DrinkPage__Title>
+    <Link
+      style={
+        Object {
+          "color": "#fff",
+        }
+      }
+      to="/AddDrink"
+    >
+      <DrinkPage__Button>
+        Add drink
+      </DrinkPage__Button>
+    </Link>
+  </DrinkPage__ContentContainer>
+  <br />
+  <DrinkPage__ContentContainer>
+    <DrinkList />
+  </DrinkPage__ContentContainer>
+</DrinkPage__PageContainer>
+`;
+
+exports[`renders a DrinkPage by default 1`] = `
+<DrinkPage__PageContainer
+  mobile={false}
+>
+  <DrinkPage__ContentContainer>
+    <DrinkPage__Title>
+      Add or browse drinks
+    </DrinkPage__Title>
+    <Link
+      style={
+        Object {
+          "color": "#fff",
+        }
+      }
+      to="/AddDrink"
+    >
+      <DrinkPage__Button>
+        Add drink
+      </DrinkPage__Button>
+    </Link>
+  </DrinkPage__ContentContainer>
+  <br />
+  <DrinkPage__ContentContainer>
+    <DrinkList />
+  </DrinkPage__ContentContainer>
+</DrinkPage__PageContainer>
+`;
