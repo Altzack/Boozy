@@ -25,6 +25,7 @@ const StyledLabel = styled.label`
   color: #fff;
   font-weight: 500;
 `;
+
 const Button = styled.button`
   color: #fff;
   width: 200px;

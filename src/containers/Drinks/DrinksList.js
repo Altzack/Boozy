@@ -84,7 +84,6 @@ export default class DrinkList extends React.Component {
               src="placeholderdrink-min.jpg"
             />
           </div>
-
           <Link to={`/drinks/${drink.id}`}>
             <Button>View drink</Button>
           </Link>

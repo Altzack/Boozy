@@ -58,7 +58,6 @@ class App extends Component {
     this.setState({
       drinks,
       error: null,
-      loading: false,
     });
   };
 
