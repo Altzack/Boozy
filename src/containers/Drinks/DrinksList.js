@@ -66,9 +66,6 @@ const Button = styled.button`
 `;
 
 export default class DrinkList extends React.Component {
-  componentDidMount() {
-    this.context.getDrinks();
-  }
   static contextType = AppContext;
 
   render() {
