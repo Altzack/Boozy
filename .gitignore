@@ -10,7 +10,7 @@
 
 # production
 /build
-
+/_snapshots_
 # misc
 .DS_Store
 .env.local
