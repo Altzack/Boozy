@@ -202,11 +202,10 @@ export default class DrinkInfoPage extends React.Component {
         <div>
           <Button onClick={this.handleClickDelete}>Delete</Button>
           <Button onClick={this.copyToClipboard}>Share</Button>
-          <Button>
-            <Link style={{ color: '#fff' }} to={`/EditDrink/${drinkId}`}>
-              Edit
-            </Link>
-          </Button>
+
+          <Link style={{ color: '#fff' }} to={`/EditDrink/${drinkId}`}>
+            <Button>Edit</Button>
+          </Link>
         </div>
         <Modified>
           Modified: {moment(drinkInfo.modified).format('MM/DD/YY')}
