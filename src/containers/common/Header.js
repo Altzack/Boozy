@@ -1,9 +1,9 @@
 import styled from 'styled-components/macro';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { DesktopOnly, MobileOnly } from './responsiveComponents';
 import { Drawer, Button } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import { DesktopOnly, MobileOnly } from './responsiveComponents';
 import 'antd/dist/antd.css';
 import '../../App.css';
 
@@ -97,7 +97,7 @@ export default function Header() {
             </LogoLink>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'flex-end' }}>
-            <img alt="logo" src="favicon-32x32.png"></img>
+            <img alt="logo" src="favicon-32x32.png" />
           </HeaderSection>
         </HeaderContentContainer>
       </DesktopOnly>
@@ -122,7 +122,7 @@ export default function Header() {
             </LogoLink>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'flex-end' }}>
-            <img alt="logo" src="favicon-32x32.png"></img>
+            <img alt="logo" src="favicon-32x32.png" />
           </HeaderSection>
         </HeaderContentContainer>
         <Drawer
