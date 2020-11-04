@@ -5,6 +5,7 @@ import styled from 'styled-components/macro';
 import config from '../../config';
 import '../../App.css';
 import moment from 'moment';
+import Loader from '../Loader/Loader';
 
 const DrinkContainer = styled.div`
   justify-content: center;
@@ -160,6 +161,7 @@ export default class DrinkInfoPage extends React.Component {
   };
 
   render() {
+    if (this.context.loading === true) return <Loader />;
     const drinkId = Number(this.props.match.params.drinkId);
     const drinkInfo =
       this.context.drinks.length > 0

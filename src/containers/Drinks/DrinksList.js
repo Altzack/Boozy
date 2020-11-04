@@ -67,11 +67,6 @@ const Button = styled.button`
 `;
 
 export default class DrinkList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { loading: true };
-  }
-
   static contextType = AppContext;
 
   render() {
