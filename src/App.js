@@ -17,7 +17,7 @@ import About from './containers/About/About';
 import DrinkPage from './containers/Drinks/DrinkPage';
 import config from './config';
 import AppContext from './AppContext';
-import DrinkInfoPage from './containers/DrinkInfoPage/DrinkInfoPage';
+import DrinkInfoPage from './containers/Drinks/DrinkInfoPage';
 import AddDrink from './containers/AddDrink/AddDrink';
 import EditDrink from './containers/EditDrink/EditDrink';
 
