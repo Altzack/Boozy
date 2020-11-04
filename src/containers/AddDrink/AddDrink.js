@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import AppContext from '../../AppContext';
 import BoozyError from '../../BoozyError';
-import ValidationError from '../../ValidationError';
 import config from '../../config';
 import styled from 'styled-components/macro';
 import '../../App.css';
@@ -204,9 +203,6 @@ export default class AddDrink extends Component {
             <Button type="submit" to="/">
               Add Drink
             </Button>
-            {this.state.errorMessage && (
-              <ValidationError message={this.state.errorMessage} />
-            )}
           </div>
         </BoozyForm>
       </BoozyError>

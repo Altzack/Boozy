@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { Link } from 'react-router-dom';
 import { useResponsive } from '../common/responsiveComponents';
 import DrinkList from './DrinksList';
-import { Link } from 'react-router-dom';
 
 const ContentContainer = styled.div`
   flex-direction: column;
@@ -61,7 +61,7 @@ export default function DrinkPage() {
     <PageContainer mobile={isTabletOrMobile}>
       <ContentContainer>
         <Title>Add or browse drinks</Title>
-        <Link style={{ color: '#fff' }} to={`/AddDrink`}>
+        <Link style={{ color: '#fff' }} to="/AddDrink">
           <Button>Add drink</Button>
         </Link>
       </ContentContainer>

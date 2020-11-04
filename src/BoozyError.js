@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 class BoozyError extends React.Component {
   constructor(props) {
@@ -15,9 +15,9 @@ class BoozyError extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <Fragment>
+        <>
           <h2>Could not display this screen.</h2>
-        </Fragment>
+        </>
       );
     }
     return this.props.children;

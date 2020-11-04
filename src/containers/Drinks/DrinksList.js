@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import AppContext from '../../AppContext';
+import Loader from '../Loader/Loader';
 
 const DrinkContainer = styled.div`
   max-width: 1000px;
@@ -66,9 +67,16 @@ const Button = styled.button`
 `;
 
 export default class DrinkList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { loading: true };
+  }
+
   static contextType = AppContext;
 
   render() {
+    if (this.context.loading === true) return <Loader />;
+
     const list = this.context.drinks.map((drink) => {
       return (
         <DrinkContainer className="drink" key={drink.id}>

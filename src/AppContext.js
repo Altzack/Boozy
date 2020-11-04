@@ -4,6 +4,7 @@ const AppContext = React.createContext({
   addDrink: () => {},
   deleteDrink: () => {},
   drinks: [],
+  loading: true,
   getDrinks: () => {},
 });
 

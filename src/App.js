@@ -51,13 +51,14 @@ const AppWrapper = withRouter(({ children }) => {
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { drinks: [] };
+    this.state = { drinks: [], loading: true };
   }
 
   setDrinks = (drinks) => {
     this.setState({
       drinks,
       error: null,
+      loading: false,
     });
   };
 
@@ -98,6 +99,7 @@ class App extends Component {
   render() {
     const contextValues = {
       drinks: this.state.drinks || [],
+      loading: this.state.loading,
       addDrink: this.addDrink,
       deleteDrink: this.deleteDrink,
       getDrinks: this.getDrinks,
