@@ -161,7 +161,14 @@ export default class DrinkInfoPage extends React.Component {
   };
 
   render() {
-    if (this.context.loading === true) return <Loader />;
+    if (this.context.loading === true)
+      return (
+        <>
+          <div style={{ marginTop: 300 }}>
+            <Loader />
+          </div>
+        </>
+      );
     const drinkId = Number(this.props.match.params.drinkId);
     const drinkInfo =
       this.context.drinks.length > 0

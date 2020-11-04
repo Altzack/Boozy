@@ -70,7 +70,12 @@ export default class DrinkList extends React.Component {
   static contextType = AppContext;
 
   render() {
-    if (this.context.loading === true) return <Loader />;
+    if (this.context.loading === true)
+      return (
+        <div style={{ marginTop: 150 }}>
+          <Loader />
+        </div>
+      );
 
     const list = this.context.drinks.map((drink) => {
       return (
