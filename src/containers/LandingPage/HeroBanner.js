@@ -84,19 +84,10 @@ const Background = styled.div`
 
 const CTAButton = styled(Button)`
   margin: 5px;
-  background-color: #ff294a;
+  background-color: #1c89ff;
   border: #ff294a;
   &:hover {
-    background-color: #ff7875;
-  }
-  &:active {
-    background-color: #d9363e !important;
-  }
-  &:focus-within {
-    background-color: #ff7875;
-  }
-  &:focus {
-    background-color: #ff7875;
+    background-color: #3e9afc;
   }
 `;
 

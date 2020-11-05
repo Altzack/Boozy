@@ -54,10 +54,8 @@ const StyledTitle = styled.h1`
   margin-bottom: 0;
   letter-spacing: 3px;
   font-family: Permanent Marker;
-  :hover {
-    color: #1890ff;
-  }
 `;
+
 const LogoLink = styled(Link)`
   justify-self: center;
   align-self: center;

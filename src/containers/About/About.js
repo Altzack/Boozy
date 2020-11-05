@@ -12,20 +12,20 @@ const ContentContainer = styled.div`
     font-size: 20px;
     padding: 10px;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 60897d0f27289736e6ad92a9b8d023c63a7b23f1
-  @media (min-width: 750px) {
+  <<<<<<<
+    HEAD
+    =======>>>>>>>60897d0f27289736e6ad92a9b8d023c63a7b23f1
+    @media
+    (min-width: 750px) {
     font-size: 20px;
     max-width: 650px;
     padding: 10px;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 60897d0f27289736e6ad92a9b8d023c63a7b23f1
-  @media (min-width: 1023px) {
+  <<<<<<<
+    HEAD
+    =======>>>>>>>60897d0f27289736e6ad92a9b8d023c63a7b23f1
+    @media
+    (min-width: 1023px) {
     max-width: 900px;
     font-size: 30px;
     padding: 10px;
@@ -71,7 +71,7 @@ export default function LandingPage() {
       <ContentContainer>
         During this time where we can't attend parties with our friends, Boozy
         allows you to connect by sharing drink recipes. With Boozy you can
-        browse, create and share custom drink recipes with your friends.
+        browse, create and share custom drink recipes with people everywhere.
         <br />
         <br />
         Drink responsibly!

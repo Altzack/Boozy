@@ -83,7 +83,7 @@ const Button = styled.button`
   color: #fff;
   font-weight: 500;
   height: 34px;
-  background-color: #2a9d8f;
+  background-color: #1c89ff;
   margin-top: 12px;
   margin-right: 10px;
   width: 200px;
@@ -94,7 +94,7 @@ const Button = styled.button`
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
   :hover {
     transition: all 0.1s ease-in-out;
-    background-color: #61d5c7;
+    background-color: #3e9afc;
     cursor: pointer;
   }
   @media (min-width: 299px) {
