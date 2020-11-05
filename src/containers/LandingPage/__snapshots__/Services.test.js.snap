@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Serivces by default 1`] = `
+<section
+  className="services"
+>
+  <Services__Title>
+    Why Boozy?
+  </Services__Title>
+  <div
+    className="services-center"
+  >
+    <article
+      className="service"
+      key="0"
+    >
+      <span>
+        <FaLightbulb />
+      </span>
+      <h6>
+        Unlimited possibilites
+      </h6>
+      <p>
+        Put your creativity to work and come up with completely unique drink recipes.
+      </p>
+    </article>
+    <article
+      className="service"
+      key="1"
+    >
+      <span>
+        <FaHourglassHalf />
+      </span>
+      <h6>
+        Quick and easy
+      </h6>
+      <p>
+        Looking for something new to try? Boozy can give you great suggestions, fast.
+      </p>
+    </article>
+    <article
+      className="service"
+      key="2"
+    >
+      <span>
+        <FaWineGlassAlt />
+      </span>
+      <h6>
+        Find your new favorite
+      </h6>
+      <p>
+        Browse other users awesome creations and find your new favorite drink!
+      </p>
+    </article>
+    <article
+      className="service"
+      key="3"
+    >
+      <span>
+        <FaGrinBeam />
+      </span>
+      <h6>
+        Sharing is caring
+      </h6>
+      <p>
+        Best of all, you can share your ideas with people everywhere!
+      </p>
+    </article>
+  </div>
+</section>
+`;

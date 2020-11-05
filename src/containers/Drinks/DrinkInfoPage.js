@@ -124,6 +124,13 @@ const Button = styled.button`
 `;
 
 export default class DrinkInfoPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+    };
+  }
+
   static contextType = AppContext;
 
   copyToClipboard = () => {
@@ -158,7 +165,7 @@ export default class DrinkInfoPage extends React.Component {
         this.context.deleteDrink(drinkId);
       })
       .catch((error) => {
-        console.error({ error });
+        this.setState({ error });
       });
   };
 

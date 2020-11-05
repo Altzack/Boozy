@@ -66,6 +66,13 @@ const SubTitle = styled.h2`
 `;
 
 export default class EditDrink extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+    };
+  }
+
   static contextType = AppContext;
 
   handleSubmit = (e) => {
@@ -98,7 +105,7 @@ export default class EditDrink extends Component {
         window.location.reload();
       })
       .catch((error) => {
-        console.log(error);
+        this.setState({ error });
       });
   };
 

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a HeroBanner by default 1`] = `
+<HeroBanner__HeroBannerContainer>
+  <HeroBanner__CTAContainer>
+    <br />
+    <Title
+      level={2}
+      style={
+        Object {
+          "color": "white",
+          "marginBottom": "5px",
+          "maxWidth": "600px",
+          "textAlign": "center",
+        }
+      }
+    >
+      Welcome to Boozy, a platform to connect through drink recipes.
+    </Title>
+    <br />
+    <br />
+    <HeroBanner__StyledParagraph>
+      Create fun, unique and delicious mixed drink recipes that you can share with all your friends!
+    </HeroBanner__StyledParagraph>
+    <br />
+    <HeroBanner__Row>
+      <Link
+        to="/drinks"
+      >
+        <HeroBanner__CTAButton
+          shape="round"
+          size="large"
+          style={
+            Object {
+              "width": 124,
+            }
+          }
+          type="primary"
+        >
+          Drinks
+        </HeroBanner__CTAButton>
+      </Link>
+      <Link
+        to="/about"
+      >
+        <HeroBanner__CTAButton
+          shape="round"
+          size="large"
+          style={
+            Object {
+              "width": 124,
+            }
+          }
+          type="primary"
+        >
+          About
+        </HeroBanner__CTAButton>
+      </Link>
+    </HeroBanner__Row>
+    <br />
+    <HeroBanner__Background />
+  </HeroBanner__CTAContainer>
+  <HeroBanner__HeroImage
+    alt="Banner"
+    mobile={false}
+    src="/club-min.jpg"
+  />
+  <HeroBanner__DarkBackground />
+</HeroBanner__HeroBannerContainer>
+`;

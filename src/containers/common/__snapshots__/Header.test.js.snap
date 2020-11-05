@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Header by default 1`] = `
+<Header__AppHeaderContainer>
+  <DesktopOnly>
+    <Header__HeaderContentContainer>
+      <Header__HeaderSection
+        style={
+          Object {
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <Link
+          style={
+            Object {
+              "color": "#000",
+              "textDecoration": "none",
+            }
+          }
+          to="/about"
+        >
+          <Header__StyledHeader>
+            About
+          </Header__StyledHeader>
+        </Link>
+        <Header__FooterSeparator>
+          |
+        </Header__FooterSeparator>
+        <Link
+          style={
+            Object {
+              "color": "#000",
+              "textDecoration": "none",
+            }
+          }
+          to="/drinks"
+        >
+          <Header__StyledHeader>
+            Drinks
+          </Header__StyledHeader>
+        </Link>
+      </Header__HeaderSection>
+      <Header__HeaderSection
+        style={
+          Object {
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Header__LogoLink
+          to="/"
+        >
+          <Header__StyledTitle>
+            Boozy
+          </Header__StyledTitle>
+        </Header__LogoLink>
+      </Header__HeaderSection>
+      <Header__HeaderSection
+        style={
+          Object {
+            "justifyContent": "flex-end",
+          }
+        }
+      >
+        <img
+          alt="logo"
+          src="/favicon-32x32.png"
+        />
+      </Header__HeaderSection>
+    </Header__HeaderContentContainer>
+  </DesktopOnly>
+  <MobileOnly>
+    <Header__HeaderContentContainer>
+      <Header__HeaderSection
+        style={
+          Object {
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <Button
+          block={false}
+          ghost={false}
+          htmlType="button"
+          loading={false}
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "borderColor": "transparent",
+              "color": "rgba(232, 230, 227, 0.85)",
+            }
+          }
+          ype="text"
+        >
+          <ForwardRef(MenuOutlined) />
+        </Button>
+      </Header__HeaderSection>
+      <Header__HeaderSection
+        style={
+          Object {
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Header__LogoLink
+          to="/"
+        >
+          <Header__StyledTitle>
+            Boozy
+          </Header__StyledTitle>
+        </Header__LogoLink>
+      </Header__HeaderSection>
+      <Header__HeaderSection
+        style={
+          Object {
+            "justifyContent": "flex-end",
+          }
+        }
+      >
+        <img
+          alt="logo"
+          src="/favicon-32x32.png"
+        />
+      </Header__HeaderSection>
+    </Header__HeaderContentContainer>
+    <withConfigConsumer(Drawer)
+      closable="true"
+      key="AppHeader-left-drawer"
+      onClose={[Function]}
+      placement="left"
+      visible={false}
+    >
+      <Link
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#000",
+            "textDecoration": "none",
+          }
+        }
+        to="/about"
+      >
+        <h3>
+          About
+        </h3>
+      </Link>
+      <Link
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#000",
+            "textDecoration": "none",
+          }
+        }
+        to="/drinks"
+      >
+        <h3>
+          Drinks
+        </h3>
+      </Link>
+    </withConfigConsumer(Drawer)>
+  </MobileOnly>
+</Header__AppHeaderContainer>
+`;

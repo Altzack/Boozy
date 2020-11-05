@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Footer by default 1`] = `
+<Footer__FooterContainer>
+  <Footer__FooterContentContainer
+    mobile={false}
+  >
+    <div>
+      Boozy
+      <Footer__FooterSeparator>
+        |
+      </Footer__FooterSeparator>
+      Created by 
+      <i>
+        Zack 2020
+      </i>
+    </div>
+    <MobileOnly>
+      <br />
+    </MobileOnly>
+    <div>
+      <a
+        href="https://github.com/Altzack"
+      >
+        <FaGithub
+          size="25px"
+          style={
+            Object {
+              "marginRight": 15,
+            }
+          }
+        />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/zack-altschuler"
+      >
+        <FaLinkedin
+          size="25px"
+          style={
+            Object {
+              "marginRight": 15,
+            }
+          }
+        />
+      </a>
+      <a
+        href="mailto:altschulerzack@yahoo.com"
+      >
+        <FaTelegramPlane
+          size="25px"
+          style={
+            Object {
+              "marginRight": 15,
+            }
+          }
+        />
+      </a>
+    </div>
+  </Footer__FooterContentContainer>
+</Footer__FooterContainer>
+`;

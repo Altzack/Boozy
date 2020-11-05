@@ -22,7 +22,7 @@ exports[`renders a AddDrink by default 1`] = `
       <div
         className="field"
       >
-        <input
+        <AddDrink__BoozyInput
           aria-label="Title"
           aria-required="true"
           id="title"
@@ -30,18 +30,13 @@ exports[`renders a AddDrink by default 1`] = `
           name="title-section"
           placeholder="Title..."
           required={true}
-          style={
-            Object {
-              "width": 200,
-            }
-          }
           type="text"
         />
       </div>
       <div
         className="field"
       >
-        <input
+        <AddDrink__BoozyInput
           aria-label="alcohol"
           aria-required="true"
           id="alcohol"
@@ -49,83 +44,58 @@ exports[`renders a AddDrink by default 1`] = `
           name="alcohol-section"
           placeholder="Alcohol..."
           required={true}
-          style={
-            Object {
-              "width": 200,
-            }
-          }
           type="text"
         />
       </div>
       <div
         className="field"
       >
-        <input
+        <AddDrink__BoozyInput
           aria-label="mixers"
           aria-required="true"
           id="mixers"
           maxLength="40"
           name="mixers-section"
           placeholder="Mixers..."
-          style={
-            Object {
-              "width": 200,
-            }
-          }
           type="text"
         />
       </div>
       <div
         className="field"
       >
-        <input
+        <AddDrink__BoozyInput
           aria-label="liqueur"
           aria-required="true"
           id="liqueurs"
           maxLength="40"
           name="liqueur-section"
           placeholder="Liqueurs..."
-          style={
-            Object {
-              "width": 200,
-            }
-          }
           type="text"
         />
       </div>
       <div
         className="field"
       >
-        <input
+        <AddDrink__BoozyInput
           aria-label="juice"
           aria-required="true"
           id="juices"
           maxLength="40"
           name="juices-section"
           placeholder="Juices..."
-          style={
-            Object {
-              "width": 200,
-            }
-          }
           type="text"
         />
       </div>
       <div
         className="field"
       >
-        <input
+        <AddDrink__BoozyInput
           aria-label="other"
           aria-required="true"
           id="other"
           maxLength="40"
           name="other-section"
           placeholder="Other..."
-          style={
-            Object {
-              "width": 200,
-            }
-          }
           type="text"
         />
       </div>
@@ -142,7 +112,7 @@ exports[`renders a AddDrink by default 1`] = `
           style={
             Object {
               "height": 60,
-              "width": 250,
+              "width": 260,
             }
           }
         />

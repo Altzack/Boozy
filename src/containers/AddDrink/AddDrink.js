@@ -70,7 +70,7 @@ export default class AddDrink extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorMessage: null,
+      error: null,
     };
   }
 
@@ -106,7 +106,7 @@ export default class AddDrink extends Component {
         this.props.history.push('/drinks');
       })
       .catch((error) => {
-        console.log(error);
+        this.setState({ error });
       });
   };
 
