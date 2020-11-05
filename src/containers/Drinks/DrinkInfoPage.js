@@ -39,7 +39,7 @@ const SubTitle = styled.h2`
   font-family: Rubik;
   font-weight: 200;
   text-align: center;
-  color: rgba(232, 230, 227, 0.85);
+  color: #fff;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin-bottom: 10px;

@@ -199,7 +199,7 @@ export default class AddDrink extends Component {
             </div>
             <div className="buttons">
               <Button type="submit" to="/">
-                Add Drink
+                Add drink
               </Button>
             </div>
           </BoozyForm>
