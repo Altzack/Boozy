@@ -6,6 +6,7 @@ import config from '../../config';
 import '../../App.css';
 import moment from 'moment';
 import Loader from '../Loader/Loader';
+import FourOhFour from '../common/FourOhFour';
 
 const DrinkContainer = styled.div`
   justify-content: center;
@@ -169,6 +170,7 @@ export default class DrinkInfoPage extends React.Component {
           </div>
         </>
       );
+
     const drinkId = Number(this.props.match.params.drinkId);
     const drinkInfo =
       this.context.drinks.length > 0
@@ -178,39 +180,53 @@ export default class DrinkInfoPage extends React.Component {
         : '';
 
     return (
-      <DrinkContainer className="drink">
-        <Title>{drinkInfo.title}</Title>
-        <SubTitle>Alcohol: {drinkInfo.alcohol}</SubTitle>
-        {drinkInfo.mixers ? (
-          <SubTitle>Mixers: {drinkInfo.mixers}</SubTitle>
-        ) : (
-          ''
-        )}
-        {drinkInfo.liqueurs ? (
-          <SubTitle>Liqueur: {drinkInfo.liqueurs}</SubTitle>
-        ) : (
-          ''
-        )}
-        {drinkInfo.juices ? (
-          <SubTitle>Juices: {drinkInfo.juices}</SubTitle>
-        ) : (
-          ''
-        )}
-        {drinkInfo.other ? <SubTitle>Other: {drinkInfo.other}</SubTitle> : ''}
-        <Instructions>{drinkInfo.instructions}</Instructions>
-        <br />
-        <div>
-          <Button onClick={this.handleClickDelete}>Delete</Button>
-          <Button onClick={this.copyToClipboard}>Share</Button>
+      <>
+        {drinkInfo ? (
+          <DrinkContainer className="drink">
+            {drinkInfo.title ? <Title>{drinkInfo.title}</Title> : ''}
+            {drinkInfo.alcohol ? (
+              <SubTitle>Alcohol: {drinkInfo.alcohol}</SubTitle>
+            ) : (
+              ''
+            )}
+            {drinkInfo.mixers ? (
+              <SubTitle>Mixers: {drinkInfo.mixers}</SubTitle>
+            ) : (
+              ''
+            )}
+            {drinkInfo.liqueurs ? (
+              <SubTitle>Liqueur: {drinkInfo.liqueurs}</SubTitle>
+            ) : (
+              ''
+            )}
+            {drinkInfo.juices ? (
+              <SubTitle>Juices: {drinkInfo.juices}</SubTitle>
+            ) : (
+              ''
+            )}
+            {drinkInfo.other ? (
+              <SubTitle>Other: {drinkInfo.other}</SubTitle>
+            ) : (
+              ''
+            )}
+            <Instructions>{drinkInfo.instructions}</Instructions>
+            <br />
+            <div>
+              <Button onClick={this.handleClickDelete}>Delete</Button>
+              <Button onClick={this.copyToClipboard}>Share</Button>
 
-          <Link style={{ color: '#fff' }} to={`/EditDrink/${drinkId}`}>
-            <Button>Edit</Button>
-          </Link>
-        </div>
-        <Modified>
-          Modified: {moment(drinkInfo.modified).format('MM/DD/YY')}
-        </Modified>
-      </DrinkContainer>
+              <Link style={{ color: '#fff' }} to={`/EditDrink/${drinkId}`}>
+                <Button>Edit</Button>
+              </Link>
+            </div>
+            <Modified>
+              Modified: {moment(drinkInfo.modified).format('MM/DD/YY')}
+            </Modified>
+          </DrinkContainer>
+        ) : (
+          <FourOhFour />
+        )}
+      </>
     );
   }
 }
