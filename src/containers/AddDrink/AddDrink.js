@@ -9,10 +9,11 @@ import moment from 'moment';
 const BoozyForm = styled.form`
   display: flex;
   color: #000;
+  width: 500px;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 50px 40px;
-  background: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
     0 1px 1px rgba(128, 128, 128, 0.155),
@@ -21,10 +22,6 @@ const BoozyForm = styled.form`
     0 12px 12px rgba(128, 128, 128, 0.35);
 `;
 
-const StyledLabel = styled.label`
-  color: #fff;
-  font-weight: 500;
-`;
 const Button = styled.button`
   color: #fff;
   width: 200px;
@@ -113,98 +110,100 @@ export default class AddDrink extends Component {
       <BoozyError>
         <Title>Create A Drink</Title>
         <SubTitle>If none, leave the field blank</SubTitle>
-        <BoozyForm onSubmit={this.handleSubmit}>
-          <div className="field">
-            <StyledLabel htmlFor="title">Title: </StyledLabel>
-            <input
-              type="text"
-              id="title"
-              name="title-section"
-              placeholder="Piña colada..."
-              aria-required="true"
-              aria-label="Title"
-              maxLength="28"
-              required
-            />
-          </div>
-          <div className="field">
-            <StyledLabel htmlFor="alcohol">Alcohol: </StyledLabel>
-            <input
-              type="text"
-              id="alcohol"
-              placeholder="Rum..."
-              name="alcohol-section"
-              aria-required="true"
-              aria-label="alcohol"
-              maxLength="20"
-              required
-            />
-          </div>
-          <div className="field">
-            <StyledLabel htmlFor="other">Mixers: </StyledLabel>
-            <input
-              type="text"
-              id="mixers"
-              placeholder="..."
-              name="mixers-section"
-              aria-required="true"
-              maxLength="20"
-              aria-label="mixers"
-            />
-          </div>
-          <div className="field">
-            <StyledLabel htmlFor="liqueur">Liqueurs: </StyledLabel>
-            <input
-              type="text"
-              id="liqueurs"
-              placeholder="..."
-              name="liqueur-section"
-              maxLength="20"
-              aria-required="true"
-              aria-label="liqueur"
-            />
-          </div>
-          <div className="field">
-            <StyledLabel htmlFor="juices">Juices: </StyledLabel>
-            <input
-              type="text"
-              placeholder="Pineapple juice..."
-              id="juices"
-              maxLength="20"
-              name="juices-section"
-              aria-required="true"
-              aria-label="juice"
-            />
-          </div>
-          <div className="field">
-            <StyledLabel htmlFor="other">Other: </StyledLabel>
-            <input
-              type="text"
-              id="other"
-              maxLength="20"
-              placeholder="Coconut cream..."
-              name="other-section"
-              aria-required="true"
-              aria-label="other"
-            />
-          </div>
-          <div className="field">
-            <textarea
-              style={{ width: 200 }}
-              id="instructions"
-              placeholder="instructions..."
-              name="instructions-section"
-              aria-label="instructions"
-              maxLength="150"
-              required
-            />
-          </div>
-          <div className="buttons">
-            <Button type="submit" to="/">
-              Add Drink
-            </Button>
-          </div>
-        </BoozyForm>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <BoozyForm onSubmit={this.handleSubmit}>
+            <div className="field">
+              <input
+                style={{ width: 200 }}
+                type="text"
+                id="title"
+                name="title-section"
+                placeholder="Title..."
+                aria-required="true"
+                aria-label="Title"
+                maxLength="28"
+                required
+              />
+            </div>
+            <div className="field">
+              <input
+                style={{ width: 200 }}
+                type="text"
+                id="alcohol"
+                placeholder="Alcohol..."
+                name="alcohol-section"
+                aria-required="true"
+                aria-label="alcohol"
+                maxLength="20"
+                required
+              />
+            </div>
+            <div className="field">
+              <input
+                style={{ width: 200 }}
+                type="text"
+                id="mixers"
+                placeholder="Mixers..."
+                name="mixers-section"
+                aria-required="true"
+                maxLength="20"
+                aria-label="mixers"
+              />
+            </div>
+            <div className="field">
+              <input
+                type="text"
+                style={{ width: 200 }}
+                id="liqueurs"
+                placeholder="Liqueurs..."
+                name="liqueur-section"
+                maxLength="20"
+                aria-required="true"
+                aria-label="liqueur"
+              />
+            </div>
+            <div className="field">
+              <input
+                type="text"
+                style={{ width: 200 }}
+                placeholder="Juices..."
+                id="juices"
+                maxLength="20"
+                name="juices-section"
+                aria-required="true"
+                aria-label="juice"
+              />
+            </div>
+            <div className="field">
+              <input
+                type="text"
+                id="other"
+                style={{ width: 200 }}
+                maxLength="20"
+                placeholder="Other..."
+                name="other-section"
+                aria-required="true"
+                aria-label="other"
+              />
+            </div>
+            <div className="field">
+              <textarea
+                style={{ width: 250, height: 60 }}
+                id="instructions"
+                placeholder="instructions..."
+                name="instructions-section"
+                aria-label="instructions"
+                maxLength="150"
+                required
+              />
+            </div>
+            <div className="buttons">
+              <Button type="submit" to="/">
+                Add Drink
+              </Button>
+            </div>
+          </BoozyForm>
+        </div>
       </BoozyError>
     );
   }
