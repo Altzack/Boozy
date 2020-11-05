@@ -9,17 +9,19 @@ import Loader from '../Loader/Loader';
 import FourOhFour from '../common/FourOhFour';
 
 const DrinkContainer = styled.div`
-  justify-content: center;
   align-items: center;
   padding: 30px;
   display: flex;
   flex-direction: column;
   margin-top: 30px;
+  @media (min-width: 767px) {
+    padding: 50px;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 30px;
-  text-align: center;
+  text-align: left;
   font-family: Rubik;
   font-weight: 400;
   letter-spacing: 3px;
@@ -38,22 +40,21 @@ const SubTitle = styled.h2`
   font-size: 20px;
   font-family: Rubik;
   font-weight: 200;
-  text-align: center;
   color: #fff;
   letter-spacing: 1px;
   text-transform: capitalize;
   margin-bottom: 10px;
   @media (min-width: 767px) {
-    font-size: 35px;
+    font-size: 30px;
   }
   @media (min-width: 1030px) {
-    font-size: 28px;
+    font-size: 35px;
   }
 `;
 
 const Modified = styled.h2`
   font-size: 10px;
-  text-align: center;
+  text-align: left;
   letter-spacing: 1px;
   text-transform: capitalize;
   color: #777;
@@ -69,7 +70,7 @@ const Modified = styled.h2`
 const Instructions = styled.div`
   max-width: 580px;
   white-space: wrap;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   @media (min-width: 767px) {
     font-size: 30px;
@@ -183,45 +184,46 @@ export default class DrinkInfoPage extends React.Component {
       <>
         {drinkInfo ? (
           <DrinkContainer className="drink">
-            {drinkInfo.title ? <Title>{drinkInfo.title}</Title> : ''}
-            {drinkInfo.alcohol ? (
-              <SubTitle>Alcohol: {drinkInfo.alcohol}</SubTitle>
-            ) : (
-              ''
-            )}
-            {drinkInfo.mixers ? (
-              <SubTitle>Mixers: {drinkInfo.mixers}</SubTitle>
-            ) : (
-              ''
-            )}
-            {drinkInfo.liqueurs ? (
-              <SubTitle>Liqueur: {drinkInfo.liqueurs}</SubTitle>
-            ) : (
-              ''
-            )}
-            {drinkInfo.juices ? (
-              <SubTitle>Juices: {drinkInfo.juices}</SubTitle>
-            ) : (
-              ''
-            )}
-            {drinkInfo.other ? (
-              <SubTitle>Other: {drinkInfo.other}</SubTitle>
-            ) : (
-              ''
-            )}
-            <Instructions>{drinkInfo.instructions}</Instructions>
-            <br />
-            <div>
-              <Button onClick={this.handleClickDelete}>Delete</Button>
-              <Button onClick={this.copyToClipboard}>Share</Button>
-
-              <Link style={{ color: '#fff' }} to={`/EditDrink/${drinkId}`}>
-                <Button>Edit</Button>
-              </Link>
+            <div style={{ textAlign: 'left' }}>
+              {drinkInfo.title ? <Title>{drinkInfo.title}</Title> : ''}
+              {drinkInfo.alcohol ? (
+                <SubTitle>Alcohol: {drinkInfo.alcohol}</SubTitle>
+              ) : (
+                ''
+              )}
+              {drinkInfo.mixers ? (
+                <SubTitle>Mixers: {drinkInfo.mixers}</SubTitle>
+              ) : (
+                ''
+              )}
+              {drinkInfo.liqueurs ? (
+                <SubTitle>Liqueur: {drinkInfo.liqueurs}</SubTitle>
+              ) : (
+                ''
+              )}
+              {drinkInfo.juices ? (
+                <SubTitle>Juices: {drinkInfo.juices}</SubTitle>
+              ) : (
+                ''
+              )}
+              {drinkInfo.other ? (
+                <SubTitle>Other: {drinkInfo.other}</SubTitle>
+              ) : (
+                ''
+              )}
+              <Instructions>{drinkInfo.instructions}</Instructions>
+              <br />
+              <div>
+                <Button onClick={this.handleClickDelete}>Delete</Button>
+                <Button onClick={this.copyToClipboard}>Share</Button>
+                <Link style={{ color: '#fff' }} to={`/EditDrink/${drinkId}`}>
+                  <Button>Edit</Button>
+                </Link>
+              </div>
+              <Modified>
+                Modified: {moment(drinkInfo.modified).format('MM/DD/YY')}
+              </Modified>
             </div>
-            <Modified>
-              Modified: {moment(drinkInfo.modified).format('MM/DD/YY')}
-            </Modified>
           </DrinkContainer>
         ) : (
           <FourOhFour />

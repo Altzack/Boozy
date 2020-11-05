@@ -5,6 +5,7 @@ import config from '../../config';
 import styled from 'styled-components/macro';
 import '../../App.css';
 import moment from 'moment';
+import '../../App.css';
 
 const BoozyForm = styled.form`
   display: flex;
@@ -61,6 +62,10 @@ const SubTitle = styled.h2`
   margin-bottom: 10px;
 `;
 
+const BoozyInput = styled.input`
+  width: 260px;
+`;
+
 export default class AddDrink extends Component {
   constructor(props) {
     super(props);
@@ -113,8 +118,7 @@ export default class AddDrink extends Component {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <BoozyForm onSubmit={this.handleSubmit}>
             <div className="field">
-              <input
-                style={{ width: 200 }}
+              <BoozyInput
                 type="text"
                 id="title"
                 name="title-section"
@@ -126,60 +130,55 @@ export default class AddDrink extends Component {
               />
             </div>
             <div className="field">
-              <input
-                style={{ width: 200 }}
+              <BoozyInput
                 type="text"
                 id="alcohol"
                 placeholder="Alcohol..."
                 name="alcohol-section"
                 aria-required="true"
                 aria-label="alcohol"
-                maxLength="20"
+                maxLength="40"
                 required
               />
             </div>
             <div className="field">
-              <input
-                style={{ width: 200 }}
+              <BoozyInput
                 type="text"
                 id="mixers"
                 placeholder="Mixers..."
                 name="mixers-section"
                 aria-required="true"
-                maxLength="20"
+                maxLength="40"
                 aria-label="mixers"
               />
             </div>
             <div className="field">
-              <input
+              <BoozyInput
                 type="text"
-                style={{ width: 200 }}
                 id="liqueurs"
                 placeholder="Liqueurs..."
                 name="liqueur-section"
-                maxLength="20"
+                maxLength="40"
                 aria-required="true"
                 aria-label="liqueur"
               />
             </div>
             <div className="field">
-              <input
+              <BoozyInput
                 type="text"
-                style={{ width: 200 }}
                 placeholder="Juices..."
                 id="juices"
-                maxLength="20"
+                maxLength="40"
                 name="juices-section"
                 aria-required="true"
                 aria-label="juice"
               />
             </div>
             <div className="field">
-              <input
+              <BoozyInput
                 type="text"
                 id="other"
-                style={{ width: 200 }}
-                maxLength="20"
+                maxLength="40"
                 placeholder="Other..."
                 name="other-section"
                 aria-required="true"
@@ -188,7 +187,7 @@ export default class AddDrink extends Component {
             </div>
             <div className="field">
               <textarea
-                style={{ width: 250, height: 60 }}
+                style={{ width: 260, height: 60 }}
                 id="instructions"
                 placeholder="instructions..."
                 name="instructions-section"

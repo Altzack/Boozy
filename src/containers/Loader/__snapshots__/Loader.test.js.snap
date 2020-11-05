@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Loader by default 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "justifyContent": "center",
+      "marginTop": 50,
+    }
+  }
+>
+  <i
+    className="fa fa-cog fa-spin fa-4x"
+  />
+</div>
+`;

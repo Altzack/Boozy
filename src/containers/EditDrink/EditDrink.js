@@ -52,6 +52,10 @@ const Title = styled.h1`
   }
 `;
 
+const BoozyInput = styled.input`
+  width: 260px;
+`;
+
 const SubTitle = styled.h2`
   font-size: 20px;
   letter-spacing: 1px;
@@ -113,47 +117,43 @@ export default class EditDrink extends Component {
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <BoozyForm onSubmit={this.handleSubmit}>
             <div className="field">
-              <input
+              <BoozyInput
                 type="text"
-                style={{ width: 200 }}
                 id="title"
                 name="title-section"
                 defaultValue={drinkInfo.title}
                 aria-required="true"
                 aria-label="Title"
-                maxLength="25"
+                maxLength="28"
                 required
               />
             </div>
             <div className="field">
-              <input
-                style={{ width: 200 }}
+              <BoozyInput
                 type="text"
                 id="alcohol"
                 defaultValue={drinkInfo.alcohol}
                 name="alcohol-section"
                 aria-required="true"
                 aria-label="alcohol"
-                maxLength="20"
+                maxLength="40"
                 required
               />
             </div>
             <div className="field">
-              <input
-                style={{ width: 200 }}
+              <BoozyInput
                 type="text"
                 id="mixers"
                 defaultValue={drinkInfo.mixers}
                 placeholder={drinkInfo.mixers ? drinkInfo.mixers : 'Mixers...'}
                 name="mixers-section"
                 aria-required="true"
-                maxLength="20"
+                maxLength="40"
                 aria-label="mixers"
               />
             </div>
             <div className="field">
-              <input
-                style={{ width: 200 }}
+              <BoozyInput
                 type="text"
                 id="liqueurs"
                 defaultValue={drinkInfo.liqueurs}
@@ -161,14 +161,13 @@ export default class EditDrink extends Component {
                   drinkInfo.liqueurs ? drinkInfo.liqueurs : 'Liqueurs...'
                 }
                 name="liqueur-section"
-                maxLength="20"
+                maxLength="40"
                 aria-required="true"
                 aria-label="liqueur"
               />
             </div>
             <div className="field">
-              <input
-                style={{ width: 200 }}
+              <BoozyInput
                 type="text"
                 defaultValue={drinkInfo.juices}
                 placeholder={drinkInfo.juices ? drinkInfo.juices : 'Juices...'}
@@ -176,17 +175,16 @@ export default class EditDrink extends Component {
                 name="juices-section"
                 aria-required="true"
                 aria-label="juice"
-                maxLength="20"
+                maxLength="40"
               />
             </div>
             <div className="field">
-              <input
+              <BoozyInput
                 type="text"
-                style={{ width: 200 }}
                 id="other"
                 placeholder={drinkInfo.other ? drinkInfo.other : 'Other...'}
                 defaultValue={drinkInfo.other}
-                maxLength="20"
+                maxLength="40"
                 name="other-section"
                 aria-required="true"
                 aria-label="other"
@@ -194,7 +192,7 @@ export default class EditDrink extends Component {
             </div>
             <div className="field">
               <textarea
-                style={{ width: 250, height: 60 }}
+                style={{ width: 260, height: 60 }}
                 id="instructions"
                 defaultValue={drinkInfo.instructions}
                 name="instructions-section"

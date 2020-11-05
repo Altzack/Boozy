@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import About from './About';
+import Loader from './Loader';
 import setupTests from '../../setupTests';
 
-it('renders a About by default', () => {
-  const wrapper = shallow(<About />);
+it('renders a Loader by default', () => {
+  const wrapper = shallow(<Loader />);
   expect(toJson(wrapper)).toMatchSnapshot();
 });
