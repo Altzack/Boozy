@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import { MobileOnly, useResponsive } from './responsiveComponents';
 import { FaGithub, FaLinkedin, FaTelegramPlane } from 'react-icons/fa';
+import { MobileOnly, useResponsive } from './responsiveComponents';
 
 const FooterSeparator = styled.span`
   padding: 0 10px;
@@ -24,6 +24,7 @@ const FooterContentContainer = styled.div`
   min-height: 64px;
   ${({ mobile }) => mobile && 'flex-direction: column; padding: 24px 0px'}
 `;
+
 export default function Footer() {
   const { isTabletOrMobile } = useResponsive();
 
