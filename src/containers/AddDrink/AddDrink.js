@@ -6,6 +6,7 @@ import styled from 'styled-components/macro';
 import '../../App.css';
 import moment from 'moment';
 import '../../App.css';
+import { message } from 'antd';
 
 const BoozyForm = styled.form`
   display: flex;
@@ -67,13 +68,6 @@ const BoozyInput = styled.input`
 `;
 
 export default class AddDrink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-    };
-  }
-
   static contextType = AppContext;
 
   handleSubmit = (e) => {
@@ -105,8 +99,8 @@ export default class AddDrink extends Component {
         this.context.addDrink(drink);
         this.props.history.push('/drinks');
       })
-      .catch((error) => {
-        this.setState({ error });
+      .catch((err) => {
+        message.error(`err: ${err}`);
       });
   };
 

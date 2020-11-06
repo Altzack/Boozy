@@ -7,6 +7,7 @@ import '../../App.css';
 import moment from 'moment';
 import Loader from '../Loader/Loader';
 import FourOhFour from '../common/FourOhFour';
+import { message } from 'antd';
 
 const DrinkContainer = styled.div`
   align-items: center;
@@ -124,13 +125,6 @@ const Button = styled.button`
 `;
 
 export default class DrinkInfoPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-    };
-  }
-
   static contextType = AppContext;
 
   copyToClipboard = () => {
@@ -139,10 +133,10 @@ export default class DrinkInfoPage extends React.Component {
 
     navigator.clipboard.writeText(copyText).then(
       function () {
-        alert('Copying link to clipboard was successful!');
+        message.success('Copying link to clipboard was successful!');
       },
       function (err) {
-        alert('Could not copy');
+        message.error('Could not copy');
       }
     );
   };
@@ -164,8 +158,8 @@ export default class DrinkInfoPage extends React.Component {
         this.props.history.push('/drinks');
         this.context.deleteDrink(drinkId);
       })
-      .catch((error) => {
-        this.setState({ error });
+      .catch((err) => {
+        message.error(`err: ${err}`);
       });
   };
 

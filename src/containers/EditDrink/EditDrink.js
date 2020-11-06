@@ -5,6 +5,7 @@ import config from '../../config';
 import styled from 'styled-components/macro';
 import '../../App.css';
 import moment from 'moment';
+import { message } from 'antd';
 
 const BoozyForm = styled.form`
   display: flex;
@@ -66,13 +67,6 @@ const SubTitle = styled.h2`
 `;
 
 export default class EditDrink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-    };
-  }
-
   static contextType = AppContext;
 
   handleSubmit = (e) => {
@@ -104,8 +98,8 @@ export default class EditDrink extends Component {
         this.props.history.push(`/drinks/${drinkId}`);
         window.location.reload();
       })
-      .catch((error) => {
-        this.setState({ error });
+      .catch((err) => {
+        message.error(`err: ${err}`);
       });
   };
 
@@ -117,6 +111,7 @@ export default class EditDrink extends Component {
             return d.id === drinkId;
           })
         : '';
+
     return (
       <BoozyError>
         <Title>Edit Drink</Title>
