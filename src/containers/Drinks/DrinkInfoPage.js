@@ -159,7 +159,7 @@ export default class DrinkInfoPage extends React.Component {
         this.context.deleteDrink(drinkId);
       })
       .catch((err) => {
-        message.error(`err: ${err}`);
+        message.error(`please try again later: ${err}`);
       });
   };
 

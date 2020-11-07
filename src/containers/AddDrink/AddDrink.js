@@ -100,7 +100,7 @@ export default class AddDrink extends Component {
         this.props.history.push('/drinks');
       })
       .catch((err) => {
-        message.error(`err: ${err}`);
+        message.error(`please try again later: ${err}`);
       });
   };
 

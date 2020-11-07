@@ -99,7 +99,7 @@ export default class EditDrink extends Component {
         window.location.reload();
       })
       .catch((err) => {
-        message.error(`err: ${err}`);
+        message.error(`please try again later: ${err}`);
       });
   };
 
