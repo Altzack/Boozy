@@ -40,7 +40,30 @@ input {
   grid-row-gap: 2rem;
   grid-column-gap: 50px;
 }
-
+.arrowDiv {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.backArrow {
+  width: 40px;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  background-color: #1c89ff;
+  box-shadow: 0 0 3px gray;
+  font-size: 20px;
+  font-weight: bold;
+}
+.backArrow:hover {
+  transition: all 0.1s ease-in-out;
+  background-color: #3e9afc;
+  cursor: pointer;
+}
 .service span {
   display: inline-block;
   color: rgba(232, 230, 227, 0.85);
@@ -60,15 +83,32 @@ input {
   margin: 0 auto;
 }
 
+@media screen and (min-width: 375px) {
+  .arrowDiv {
+    width: 95%;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .services-center {
     width: 95vw;
     max-width: 1170px;
+  }
+  .backArrow {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .arrowDiv {
+    width: 80%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .services p {
     width: 100%;
+  }
+  .arrowDiv {
+    width: 60%;
   }
 }

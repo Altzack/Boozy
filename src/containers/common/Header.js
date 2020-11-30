@@ -95,7 +95,9 @@ export default function Header() {
             </LogoLink>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'flex-end' }}>
-            <img alt="logo" src="/favicon-32x32.png" />
+            <Link to="/drinks">
+              <img alt="logo" src="/favicon-32x32.png" />
+            </Link>
           </HeaderSection>
         </HeaderContentContainer>
       </DesktopOnly>
@@ -120,7 +122,9 @@ export default function Header() {
             </LogoLink>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'flex-end' }}>
-            <img alt="logo" src="/favicon-32x32.png" />
+            <Link to="/drinks">
+              <img alt="logo" src="/favicon-32x32.png" />
+            </Link>
           </HeaderSection>
         </HeaderContentContainer>
         <Drawer

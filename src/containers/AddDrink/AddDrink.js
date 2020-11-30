@@ -7,21 +7,70 @@ import '../../App.css';
 import moment from 'moment';
 import '../../App.css';
 import { message } from 'antd';
+import { RiArrowGoBackLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 const BoozyForm = styled.form`
   display: flex;
   color: #000;
-  width: 500px;
+  margin-top: 30px;
+  width: 550px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding: 50px 40px;
+  padding: 5px 40px 40px 40px;
   border-radius: 10px;
-  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+  box-shadow: 0.4px 0.4px 0.4px 0.4px rgba(128, 128, 128, 0.109),
     0 1px 1px rgba(128, 128, 128, 0.155),
     0 2.1px 2.1px rgba(128, 128, 128, 0.195),
     0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+    0 -8px 8px -8px rgba(128, 128, 128, 0.241),
     0 12px 12px rgba(128, 128, 128, 0.35);
+`;
+
+const ArrowContainer = styled.div`
+  text-align: left;
+  20%;
+  @media (min-width: 300px) {
+    margin-right: 5px;
+    margin-top: 15px;
+  }
+  @media (min-width: 325px) {
+    margin-right: 10px;
+    margin-top: 15px;
+  }
+  @media (min-width: 365px) {
+    margin-right: 20px;
+    margin-top: 15px;
+  }
+  @media (min-width: 450px) {
+    margin-right: 25px;
+    margin-top: 22px;
+  }
+  @media (min-width: 600px) {
+    margin-right: 35px;
+    margin-top: 25px;
+  }
+`;
+
+const BackArrow = styled.div`
+  width: 40px;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  background-color: #1c89ff;
+  box-shadow: 0 0 3px gray;
+  font-size: 20px;
+  font-weight: bold;
+  @media (min-width: 600px) {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
 `;
 
 const Button = styled.button`
@@ -43,24 +92,29 @@ const Button = styled.button`
 `;
 
 const Title = styled.h1`
-  font-size: 2rem;
+  font-size: 30px;
   letter-spacing: 3px;
   text-transform: capitalize;
   color: #fff;
+  width: 100%;
   margin-top: 20px;
   text-align: center;
+  @media (min-width: 300px) {
+    margin-right: 45px;
+  }
   @media (max-width: 480px) {
     font-size: 22px;
   }
 `;
 
 const SubTitle = styled.h2`
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 1px;
   text-transform: capitalize;
   text-align: center;
   color: #fff;
   margin-bottom: 10px;
+  margin-top: 10px;
 `;
 
 const BoozyInput = styled.input`
@@ -98,19 +152,31 @@ export default class AddDrink extends Component {
       .then((drink) => {
         this.context.addDrink(drink);
         this.props.history.push('/drinks');
+        message.success('Drink successfully added');
       })
       .catch((err) => {
-        message.error(`please try again later: ${err}`);
+        message.error(`Please try again later: ${err}`);
       });
   };
 
   render() {
     return (
       <BoozyError>
-        <Title>Create A Drink</Title>
-        <SubTitle>If none, leave the field blank</SubTitle>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div
+          style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+        >
           <BoozyForm onSubmit={this.handleSubmit}>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+              <ArrowContainer>
+                <BackArrow>
+                  <Link style={{ color: '#fff' }} to={`/drinks`}>
+                    <RiArrowGoBackLine />
+                  </Link>
+                </BackArrow>
+              </ArrowContainer>
+              <Title>Create A Drink</Title>
+            </div>
+            <SubTitle>If none, leave the field blank</SubTitle>
             <div className="field">
               <BoozyInput
                 type="text"

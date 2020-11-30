@@ -8,13 +8,14 @@ import moment from 'moment';
 import Loader from '../Loader/Loader';
 import FourOhFour from '../common/FourOhFour';
 import { message } from 'antd';
+import { RiArrowGoBackLine } from 'react-icons/ri';
 
 const DrinkContainer = styled.div`
   align-items: center;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 5px;
   @media (min-width: 767px) {
     padding: 50px;
   }
@@ -157,9 +158,10 @@ export default class DrinkInfoPage extends React.Component {
       .then(() => {
         this.props.history.push('/drinks');
         this.context.deleteDrink(drinkId);
+        message.success('Drink successfully deleted');
       })
       .catch((err) => {
-        message.error(`please try again later: ${err}`);
+        message.error(`Please try again later: ${err}`);
       });
   };
 
@@ -185,6 +187,13 @@ export default class DrinkInfoPage extends React.Component {
       <>
         {drinkInfo ? (
           <DrinkContainer className="drink">
+            <div className="arrowDiv">
+              <div className="backArrow">
+                <Link style={{ color: '#fff' }} to="/drinks">
+                  <RiArrowGoBackLine />
+                </Link>
+              </div>
+            </div>
             <div style={{ textAlign: 'left' }}>
               {drinkInfo.title ? <Title>{drinkInfo.title}</Title> : ''}
               {drinkInfo.alcohol ? (
