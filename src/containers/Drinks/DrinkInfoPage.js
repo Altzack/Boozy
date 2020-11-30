@@ -187,14 +187,14 @@ export default class DrinkInfoPage extends React.Component {
       <>
         {drinkInfo ? (
           <DrinkContainer className="drink">
-            <div className="arrowDiv">
-              <div className="backArrow">
+            <div style={{ textAlign: 'left' }}>
+              <div className="arrowDiv">
                 <Link style={{ color: '#fff' }} to="/drinks">
-                  <RiArrowGoBackLine />
+                  <div className="backArrow">
+                    <RiArrowGoBackLine />
+                  </div>
                 </Link>
               </div>
-            </div>
-            <div style={{ textAlign: 'left' }}>
               {drinkInfo.title ? <Title>{drinkInfo.title}</Title> : ''}
               {drinkInfo.alcohol ? (
                 <SubTitle>Alcohol: {drinkInfo.alcohol}</SubTitle>

@@ -24,6 +24,9 @@ const PageContainer = styled.div`
   @media (max-width: 350px) {
     margin-right: 50px;
   }
+  @media (min-width: 1100px) {
+    width: 75%;
+  }
 `;
 
 const Title = styled.h1`
@@ -86,11 +89,13 @@ export default class DrinkList extends React.Component {
             </Link>
           </Title>
           <div>
-            <img
-              alt="drink"
-              style={{ width: 190 }}
-              src="placeholderdrink-min.jpg"
-            />
+            <Link to={`/drinks/${drink.id}`}>
+              <img
+                alt="drink"
+                style={{ width: 190 }}
+                src="placeholderdrink-min.jpg"
+              />
+            </Link>
           </div>
           <Link to={`/drinks/${drink.id}`}>
             <Button>View drink</Button>

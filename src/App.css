@@ -88,19 +88,21 @@ input {
     width: 95%;
   }
 }
-
-@media screen and (min-width: 992px) {
-  .services-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
+@media screen and (min-width: 600px) {
   .backArrow {
     width: 50px;
     height: 50px;
     line-height: 50px;
   }
   .arrowDiv {
-    width: 80%;
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .services-center {
+    width: 95vw;
+    max-width: 1170px;
   }
 }
 
@@ -109,6 +111,6 @@ input {
     width: 100%;
   }
   .arrowDiv {
-    width: 60%;
+    width: 45%;
   }
 }

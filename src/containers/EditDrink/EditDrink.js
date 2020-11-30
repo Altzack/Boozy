@@ -48,7 +48,7 @@ const ArrowContainer = styled.div`
   }
   @media (min-width: 600px) {
     margin-right: 35px;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 `;
 
@@ -158,7 +158,6 @@ export default class EditDrink extends Component {
       .then(() => {
         window.location.reload();
       })
-      // .then(setTimeout(message.success('drink successfully edited'), 10000))
       .catch((err) => {
         message.error(`Please try again later: ${err}`);
       });
@@ -179,11 +178,11 @@ export default class EditDrink extends Component {
           <BoozyForm onSubmit={this.handleSubmit}>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
               <ArrowContainer>
-                <BackArrow>
-                  <Link style={{ color: '#fff' }} to={`/drinks/${drinkId}`}>
+                <Link style={{ color: '#fff' }} to={`/drinks/${drinkId}`}>
+                  <BackArrow>
                     <RiArrowGoBackLine />
-                  </Link>
-                </BackArrow>
+                  </BackArrow>
+                </Link>
               </ArrowContainer>
               <Title>Edit A Drink</Title>
             </div>

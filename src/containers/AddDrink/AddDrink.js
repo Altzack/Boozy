@@ -49,7 +49,7 @@ const ArrowContainer = styled.div`
   }
   @media (min-width: 600px) {
     margin-right: 35px;
-    margin-top: 25px;
+    margin-top: 20px;
   }
 `;
 
@@ -168,11 +168,11 @@ export default class AddDrink extends Component {
           <BoozyForm onSubmit={this.handleSubmit}>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
               <ArrowContainer>
-                <BackArrow>
-                  <Link style={{ color: '#fff' }} to={`/drinks`}>
+                <Link style={{ color: '#fff' }} to={`/drinks`}>
+                  <BackArrow>
                     <RiArrowGoBackLine />
-                  </Link>
-                </BackArrow>
+                  </BackArrow>
+                </Link>
               </ArrowContainer>
               <Title>Create A Drink</Title>
             </div>
