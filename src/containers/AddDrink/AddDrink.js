@@ -159,6 +159,11 @@ export default class AddDrink extends Component {
       });
   };
 
+  componentDidMount() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0;
+  }
+
   render() {
     return (
       <BoozyError>

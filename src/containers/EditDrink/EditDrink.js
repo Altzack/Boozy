@@ -137,6 +137,7 @@ export default class EditDrink extends Component {
       mixers: e.target['mixers-section'].value,
       modified: dayString,
     };
+
     const delay = (t) => new Promise((resolve) => setTimeout(resolve, t));
 
     fetch(`${config.API_ENDPOINT}/drinks/${drinkId}`, {
@@ -162,6 +163,11 @@ export default class EditDrink extends Component {
         message.error(`Please try again later: ${err}`);
       });
   };
+
+  componentDidMount() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0;
+  }
 
   render() {
     const drinkId = Number(this.props.match.params.drinkId);
