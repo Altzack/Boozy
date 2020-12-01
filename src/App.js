@@ -104,6 +104,7 @@ class App extends Component {
       deleteDrink: this.deleteDrink,
       getDrinks: this.getDrinks,
     };
+
     return (
       <AppContext.Provider value={contextValues}>
         <>

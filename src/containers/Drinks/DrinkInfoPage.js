@@ -142,6 +142,11 @@ export default class DrinkInfoPage extends React.Component {
     );
   };
 
+  componentDidMount() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0;
+  }
+
   handleClickDelete = (e) => {
     e.preventDefault();
     const drinkId = Number(this.props.match.params.drinkId);
