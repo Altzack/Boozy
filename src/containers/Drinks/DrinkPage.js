@@ -11,11 +11,11 @@ const ContentContainer = styled.div`
 `;
 
 const PageContainer = styled.div`
-  margin-top: 42px;
+  margin-top: 20px;
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 40px;
+  padding: 20px;
   @media (max-width: 480px) {
     margin-top: 10px;
   }
@@ -60,7 +60,6 @@ export default function DrinkPage() {
   return (
     <PageContainer mobile={isTabletOrMobile}>
       <ContentContainer>
-        <Title>Add or browse drinks</Title>
         <Link style={{ color: '#fff' }} to="/AddDrink">
           <Button>Add drink</Button>
         </Link>

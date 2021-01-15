@@ -5,28 +5,20 @@ import AppContext from '../../AppContext';
 import Loader from '../Loader/Loader';
 
 const DrinkContainer = styled.div`
-  max-width: 1000px;
   align-items: center;
-  padding: 50px;
+  padding: 10px;
+  margin-bottom: 50px;
 `;
 
 const PageContainer = styled.div`
   display: flex;
   padding-top: 42px;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  @media (max-width: 480px) {
-    flex-direction: column;
-  }
-  @media (max-width: 350px) {
-    margin-right: 50px;
-  }
-  @media (min-width: 1100px) {
-    width: 75%;
-  }
+  flex-direction: column;
 `;
 
 const Title = styled.h1`
@@ -38,18 +30,13 @@ const Title = styled.h1`
   text-transform: capitalize;
   color: #fff;
   margin-bottom: 10px;
-  max-width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  @media (min-width: 300px) {
-    max-width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 `;
-
+const Border = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+`;
 const Button = styled.button`
   color: #fff;
   font-weight: 500;
@@ -100,6 +87,9 @@ export default class DrinkList extends React.Component {
           <Link to={`/drinks/${drink.id}`}>
             <Button>View drink</Button>
           </Link>
+          <Border>
+            <div className="borderDiv"></div>
+          </Border>
         </DrinkContainer>
       );
     });

@@ -190,7 +190,7 @@ export default class AddDrink extends Component {
                 placeholder="Title..."
                 aria-required="true"
                 aria-label="Title"
-                maxLength="28"
+                maxLength="35"
                 required
               />
             </div>
@@ -202,7 +202,7 @@ export default class AddDrink extends Component {
                 name="alcohol-section"
                 aria-required="true"
                 aria-label="alcohol"
-                maxLength="40"
+                maxLength="60"
                 required
               />
             </div>
@@ -213,7 +213,7 @@ export default class AddDrink extends Component {
                 placeholder="Mixers..."
                 name="mixers-section"
                 aria-required="true"
-                maxLength="40"
+                maxLength="60"
                 aria-label="mixers"
               />
             </div>
@@ -223,7 +223,7 @@ export default class AddDrink extends Component {
                 id="liqueurs"
                 placeholder="Liqueurs..."
                 name="liqueur-section"
-                maxLength="40"
+                maxLength="60"
                 aria-required="true"
                 aria-label="liqueur"
               />
@@ -233,7 +233,7 @@ export default class AddDrink extends Component {
                 type="text"
                 placeholder="Juices..."
                 id="juices"
-                maxLength="40"
+                maxLength="60"
                 name="juices-section"
                 aria-required="true"
                 aria-label="juice"
@@ -243,7 +243,7 @@ export default class AddDrink extends Component {
               <BoozyInput
                 type="text"
                 id="other"
-                maxLength="40"
+                maxLength="60"
                 placeholder="Other..."
                 name="other-section"
                 aria-required="true"
@@ -257,7 +257,7 @@ export default class AddDrink extends Component {
                 placeholder="instructions..."
                 name="instructions-section"
                 aria-label="instructions"
-                maxLength="150"
+                maxLength="160"
                 required
               />
             </div>

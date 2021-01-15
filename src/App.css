@@ -59,6 +59,9 @@ input {
   font-size: 20px;
   font-weight: bold;
 }
+.borderDiv {
+  border-bottom: 1px solid #fff;
+}
 .backArrow:hover {
   transition: all 0.1s ease-in-out;
   background-color: #3e9afc;
@@ -82,10 +85,18 @@ input {
   width: 80%;
   margin: 0 auto;
 }
+@media screen and (min-width: 300px) {
+  .borderDiv {
+    width: 250px;
+  }
+}
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 374px) {
   .arrowDiv {
     width: 95%;
+  }
+  .borderDiv {
+    width: 280px;
   }
 }
 @media screen and (min-width: 600px) {
@@ -97,12 +108,18 @@ input {
   .arrowDiv {
     width: 60%;
   }
+  .borderDiv {
+    width: 300px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .services-center {
     width: 95vw;
     max-width: 1170px;
+  }
+  .borderDiv {
+    width: 320px;
   }
 }
 
@@ -112,5 +129,8 @@ input {
   }
   .arrowDiv {
     width: 45%;
+  }
+  .borderDiv {
+    width: 340px;
   }
 }
